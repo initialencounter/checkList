@@ -1,0 +1,44 @@
+.grid-item {
+    position: relative;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    font-size: 12px;
+    height: 30px;
+    text-align: center;
+}
+
+.grid-item:hover {
+    color: #80b9ea;
+    border: 1px solid #80b9ea;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 70px);
+    padding: 2x;
+    width: 100%;
+}
+
+.action-btn {
+    cursor: pointer;
+    border: 1px solid #fff;
+    color: #fff;
+    display: block;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 28px;
+    margin: 0 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 0%;
+    font-size: 14px;
+    padding: 0 5px;
+    background-color: green;
+}
+
+.action-btn:hover {
+    color: #80b9ea;
+    border: 1px solid #80b9ea;
+}
