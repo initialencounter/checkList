@@ -93,7 +93,7 @@ fn main() {
                     } else if lastest != current_version {
                         dialog::ask(
                             Some(&window),
-                            "RainWarm",
+                            "checkList",
                             format!("发现新版本{}，是否前往", lastest).as_str(),
                             |answer| match answer {
                                 true => open_link(
@@ -105,7 +105,7 @@ fn main() {
                     } else {
                         dialog::ask(
                             Some(&window),
-                            "RainWarm",
+                            "checkList",
                             format!("当前版本是最新版").as_str(),
                             |answer| match answer {
                                 true => (),
