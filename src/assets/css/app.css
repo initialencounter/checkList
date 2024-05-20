@@ -9,8 +9,7 @@
 }
 
 .grid-item:hover {
-    color: #80b9ea;
-    border: 1px solid #80b9ea;
+    border: 2px solid #3cb44b;
 }
 
 .grid-container {
@@ -21,24 +20,38 @@
 }
 
 .action-btn {
-    cursor: pointer;
-    border: 1px solid #fff;
-    color: #fff;
-    display: block;
-    height: 30px;
-    border-radius: 6px;
-    text-align: center;
-    line-height: 28px;
-    margin: 0 10px;
     position: absolute;
-    bottom: 10px;
-    right: 0%;
-    font-size: 14px;
-    padding: 0 5px;
-    background-color: green;
+    bottom: 0px;
+    right: 2%;
+    background: green;
+    position: relative;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    font-size: 12px;
+    height: 30px;
+    text-align: center;
+}
+.action-btn-hide {
+    position: absolute;
+    bottom: 0px;
+    right: 2%;
+    background: rgb(152, 143, 9);
+    position: relative;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    font-size: 12px;
+    height: 30px;
+    text-align: center;
+    width: 40px;
 }
 
+.action-btn-hide:hover {
+    background-color: red;
+}
 .action-btn:hover {
+    background-color: #4363d8;
     color: #80b9ea;
-    border: 1px solid #80b9ea;
+    border: 2px solid #80b9ea;
 }
