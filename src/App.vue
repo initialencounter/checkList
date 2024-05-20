@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { register } from '@tauri-apps/api/globalShortcut';
 import { invoke } from '@tauri-apps/api/tauri';
+import { appWindow } from '@tauri-apps/api/window';
 let target = 0;
 
 type file = {
@@ -60,12 +61,15 @@ function switchState(name: string) {
   // @ts-ignore
   check_list.value[name].state = check_list.value[name].state ? false : true
 }
+async function handleHide(){
+  await appWindow.hide()
+}
 
 register('CommandOrControl+Shift+C', () => {
   target += 1
   // @ts-ignore
   if (!check_list.value[String(target)]) {
-    target = 1
+    target = 0
   }
   // @ts-ignore
   check_list.value[String(target)].state = check_list.value[String(target)].state ? false : true
@@ -104,7 +108,8 @@ function handleClearList() {
     <button v-for="(item, index) in check_list" class="grid-item"
       :style="{ background: item.state ? '#3cb44b' : '#4363d8' }" @click="switchState(String(index))">{{ item.name
       }}</button>
-    <div class="action-btn" @click="handleClearList">清除列表</div>
+    <button class="action-btn" @click="handleClearList">清除列表</button>
+    <button class="action-btn-hide" @click="handleHide">隐藏</button>
   </div>
 </template>
 
