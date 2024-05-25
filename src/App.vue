@@ -75,6 +75,7 @@ register('CommandOrControl+Shift+C', () => {
   check_list.value[String(target)].state = check_list.value[String(target)].state ? false : true
 });
 
+// https://blog.csdn.net/weixin_44786530/article/details/129533160
 
 //屏蔽右键菜单
 document.oncontextmenu = function (event: any) {
