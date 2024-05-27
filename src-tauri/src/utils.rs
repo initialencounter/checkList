@@ -62,6 +62,18 @@ r#"{
             "state": false
         },
         {
+            "name": "尺寸",
+            "state": false
+        },
+        {
+            "name": "型号",
+            "state": false
+        },
+        {
+            "name": "商标",
+            "state": false
+        },
+        {
             "name": "数量",
             "state": false
         },
@@ -90,11 +102,7 @@ r#"{
             "state": false
         },
         {
-            "name": "电池数量",
-            "state": false
-        },
-        {
-            "name": "设备数量",
+            "name": "数量",
             "state": false
         },
         {
@@ -118,33 +126,17 @@ r#"{
             "state": false
         },
         {
-            "name": "《20《100",
-            "state": false
-        },
-        {
             "name": "结论",
             "state": false
         },
         {
-            "name": "UN编号",
-            "state": false
-        },
-        {
-            "name": "签发日期",
-            "state": false
-        },
-        {
-            "name": "测试依据",
-            "state": false
-        },
-        {
-            "name": "过度充电",
+            "name": "报告编号",
             "state": false
         }
     ],
     "position": {
-        "x": 50,
-        "y": 900
+        "x": -10,
+        "y": 925
     }
 }"#);
             write_to_file(file_path, &config);
