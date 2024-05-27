@@ -66,13 +66,13 @@ async function handleHide(){
 }
 
 register('CommandOrControl+Shift+C', () => {
-  target += 1
   // @ts-ignore
   if (!check_list.value[String(target)]) {
     target = 0
   }
   // @ts-ignore
   check_list.value[String(target)].state = check_list.value[String(target)].state ? false : true
+  target += 1
 });
 
 // https://blog.csdn.net/weixin_44786530/article/details/129533160
