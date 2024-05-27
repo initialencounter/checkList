@@ -6,6 +6,9 @@
 Do whatever you want with it!
 
 # ChangLog
+- v0.0.3
+    - 修复： 热键
+    - 更新： 配置文件
 - v0.0.2
     - 新增：隐藏窗口按钮
 - v0.0.1
