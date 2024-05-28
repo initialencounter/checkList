@@ -95,6 +95,7 @@ document.oncontextmenu = function (event: any) {
   }
 }
 function handleClearList() {
+  target = 0
   // @ts-ignore
   for (var i of check_list.value) {
     i.state = false
