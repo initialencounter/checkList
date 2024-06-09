@@ -126,10 +126,6 @@ r#"{
             "state": false
         },
         {
-            "name": "结论",
-            "state": false
-        },
-        {
             "name": "报告编号",
             "state": false
         }
