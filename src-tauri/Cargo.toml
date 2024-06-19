@@ -1,5 +1,5 @@
 [package]
-version = "0.0.3"
+version = "0.0.5"
 name = "checkList"
 description = "MD5 Checker"
 authors = ["initialencounter <2911583893@qq.com>"]

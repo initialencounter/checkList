@@ -6,7 +6,7 @@
 Do whatever you want with it!
 
 # ChangLog
-- v0.0.3
+- v0.0.5
     - 修复： 热键
     - 更新： 配置文件
 - v0.0.2
