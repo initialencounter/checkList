@@ -13,16 +13,20 @@
 }
 
 .grid-container {
+    position: absolute;
+    left: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 70px);
-    padding: 2x;
-    width: 100%;
+    grid-template-columns: auto;
+    width: 80px;
+    height: 200px;
+    grid-gap: 5px;
+    padding: 10px;
 }
 
 .action-btn {
     position: absolute;
     bottom: 0px;
-    right: 2%;
+    left: 0;
     background: green;
     position: relative;
     color: #fff;

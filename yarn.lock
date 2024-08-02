@@ -5,198 +5,249 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@babel/helper-string-parser@npm:^7.23.4":
-  version: 7.24.1
-  resolution: "@babel/helper-string-parser@npm:7.24.1"
-  checksum: 2f9bfcf8d2f9f083785df0501dbab92770111ece2f90d120352fda6dd2a7d47db11b807d111e6f32aa1ba6d763fe2dc6603d153068d672a5d0ad33ca802632b2
+"@babel/helper-string-parser@npm:^7.24.8":
+  version: 7.24.8
+  resolution: "@babel/helper-string-parser@npm:7.24.8"
+  checksum: 6361f72076c17fabf305e252bf6d580106429014b3ab3c1f5c4eb3e6d465536ea6b670cc0e9a637a77a9ad40454d3e41361a2909e70e305116a23d68ce094c08
   languageName: node
   linkType: hard
 
-"@babel/helper-validator-identifier@npm:^7.22.20":
-  version: 7.22.20
-  resolution: "@babel/helper-validator-identifier@npm:7.22.20"
-  checksum: dcad63db345fb110e032de46c3688384b0008a42a4845180ce7cd62b1a9c0507a1bed727c4d1060ed1a03ae57b4d918570259f81724aaac1a5b776056f37504e
+"@babel/helper-validator-identifier@npm:^7.24.7":
+  version: 7.24.7
+  resolution: "@babel/helper-validator-identifier@npm:7.24.7"
+  checksum: 87ad608694c9477814093ed5b5c080c2e06d44cb1924ae8320474a74415241223cc2a725eea2640dd783ff1e3390e5f95eede978bc540e870053152e58f1d651
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.23.9":
-  version: 7.23.9
-  resolution: "@babel/parser@npm:7.23.9"
+"@babel/parser@npm:^7.24.7":
+  version: 7.25.3
+  resolution: "@babel/parser@npm:7.25.3"
+  dependencies:
+    "@babel/types": "npm:^7.25.2"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: 7df97386431366d4810538db4b9ec538f4377096f720c0591c7587a16f6810e62747e9fbbfa1ff99257fd4330035e4fb1b5b77c7bd3b97ce0d2e3780a6618975
+  checksum: 874b01349aedb805d6694f867a752fdc7469778fad76aca4548d2cc6ce96087c3ba5fb917a6f8d05d2d1a74aae309b5f50f1a4dba035f5a2c9fcfe6e106d2c4e
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.8.3":
-  version: 7.24.0
-  resolution: "@babel/types@npm:7.24.0"
+"@babel/types@npm:^7.25.2":
+  version: 7.25.2
+  resolution: "@babel/types@npm:7.25.2"
   dependencies:
-    "@babel/helper-string-parser": "npm:^7.23.4"
-    "@babel/helper-validator-identifier": "npm:^7.22.20"
+    "@babel/helper-string-parser": "npm:^7.24.8"
+    "@babel/helper-validator-identifier": "npm:^7.24.7"
     to-fast-properties: "npm:^2.0.0"
-  checksum: 777a0bb5dbe038ca4c905fdafb1cdb6bdd10fe9d63ce13eca0bd91909363cbad554a53dc1f902004b78c1dcbc742056f877f2c99eeedff647333b1fadf51235d
+  checksum: e489435856be239f8cc1120c90a197e4c2865385121908e5edb7223cfdff3768cba18f489adfe0c26955d9e7bbb1fb10625bc2517505908ceb0af848989bd864
   languageName: node
   linkType: hard
 
-"@esbuild/aix-ppc64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/aix-ppc64@npm:0.19.12"
+"@ctrl/tinycolor@npm:^3.4.1":
+  version: 3.6.1
+  resolution: "@ctrl/tinycolor@npm:3.6.1"
+  checksum: 444d81612cd8c5c802a3d1253df83d5f77d3db87f351861655683a4743990e6b38976bf2e4129591c5a258607b63574b3c7bed702cf6a0eb7912222edf4570e9
+  languageName: node
+  linkType: hard
+
+"@element-plus/icons-vue@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@element-plus/icons-vue@npm:2.3.1"
+  peerDependencies:
+    vue: ^3.2.0
+  checksum: eaa00290d094fd8554027e2170cef002b6fb5f24e51f0e97764a32f0efc0fb190a9341f28292d06c3caecf1493f3d539c53ca1958d62392ee3e2a8085d2e726b
+  languageName: node
+  linkType: hard
+
+"@element-plus/icons@npm:^0.0.11":
+  version: 0.0.11
+  resolution: "@element-plus/icons@npm:0.0.11"
+  checksum: 2b1a47be7b1836c13b3099d48dfb2752c5fb0e244e5ed50489ef70ca53709f8ecac046565e13f6c03e3ec29f8ce0f05549c7175afc29086acfb66813aa6ca5c8
+  languageName: node
+  linkType: hard
+
+"@esbuild/aix-ppc64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/aix-ppc64@npm:0.21.5"
   conditions: os=aix & cpu=ppc64
   languageName: node
   linkType: hard
 
-"@esbuild/android-arm64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/android-arm64@npm:0.19.12"
+"@esbuild/android-arm64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/android-arm64@npm:0.21.5"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/android-arm@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/android-arm@npm:0.19.12"
+"@esbuild/android-arm@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/android-arm@npm:0.21.5"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@esbuild/android-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/android-x64@npm:0.19.12"
+"@esbuild/android-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/android-x64@npm:0.21.5"
   conditions: os=android & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-arm64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/darwin-arm64@npm:0.19.12"
+"@esbuild/darwin-arm64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/darwin-arm64@npm:0.21.5"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/darwin-x64@npm:0.19.12"
+"@esbuild/darwin-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/darwin-x64@npm:0.21.5"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/freebsd-arm64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/freebsd-arm64@npm:0.19.12"
+"@esbuild/freebsd-arm64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/freebsd-arm64@npm:0.21.5"
   conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/freebsd-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/freebsd-x64@npm:0.19.12"
+"@esbuild/freebsd-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/freebsd-x64@npm:0.21.5"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/linux-arm64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-arm64@npm:0.19.12"
+"@esbuild/linux-arm64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-arm64@npm:0.21.5"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/linux-arm@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-arm@npm:0.19.12"
+"@esbuild/linux-arm@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-arm@npm:0.21.5"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@esbuild/linux-ia32@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-ia32@npm:0.19.12"
+"@esbuild/linux-ia32@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-ia32@npm:0.21.5"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
 
-"@esbuild/linux-loong64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-loong64@npm:0.19.12"
+"@esbuild/linux-loong64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-loong64@npm:0.21.5"
   conditions: os=linux & cpu=loong64
   languageName: node
   linkType: hard
 
-"@esbuild/linux-mips64el@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-mips64el@npm:0.19.12"
+"@esbuild/linux-mips64el@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-mips64el@npm:0.21.5"
   conditions: os=linux & cpu=mips64el
   languageName: node
   linkType: hard
 
-"@esbuild/linux-ppc64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-ppc64@npm:0.19.12"
+"@esbuild/linux-ppc64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-ppc64@npm:0.21.5"
   conditions: os=linux & cpu=ppc64
   languageName: node
   linkType: hard
 
-"@esbuild/linux-riscv64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-riscv64@npm:0.19.12"
+"@esbuild/linux-riscv64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-riscv64@npm:0.21.5"
   conditions: os=linux & cpu=riscv64
   languageName: node
   linkType: hard
 
-"@esbuild/linux-s390x@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-s390x@npm:0.19.12"
+"@esbuild/linux-s390x@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-s390x@npm:0.21.5"
   conditions: os=linux & cpu=s390x
   languageName: node
   linkType: hard
 
-"@esbuild/linux-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/linux-x64@npm:0.19.12"
+"@esbuild/linux-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/linux-x64@npm:0.21.5"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/netbsd-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/netbsd-x64@npm:0.19.12"
+"@esbuild/netbsd-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/netbsd-x64@npm:0.21.5"
   conditions: os=netbsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/openbsd-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/openbsd-x64@npm:0.19.12"
+"@esbuild/openbsd-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/openbsd-x64@npm:0.21.5"
   conditions: os=openbsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/sunos-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/sunos-x64@npm:0.19.12"
+"@esbuild/sunos-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/sunos-x64@npm:0.21.5"
   conditions: os=sunos & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/win32-arm64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/win32-arm64@npm:0.19.12"
+"@esbuild/win32-arm64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/win32-arm64@npm:0.21.5"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@esbuild/win32-ia32@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/win32-ia32@npm:0.19.12"
+"@esbuild/win32-ia32@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/win32-ia32@npm:0.21.5"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@esbuild/win32-x64@npm:0.19.12":
-  version: 0.19.12
-  resolution: "@esbuild/win32-x64@npm:0.19.12"
+"@esbuild/win32-x64@npm:0.21.5":
+  version: 0.21.5
+  resolution: "@esbuild/win32-x64@npm:0.21.5"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@floating-ui/core@npm:^1.6.0":
+  version: 1.6.5
+  resolution: "@floating-ui/core@npm:1.6.5"
+  dependencies:
+    "@floating-ui/utils": "npm:^0.2.5"
+  checksum: 41651f6ebed3123809a3992966d9d6b740048fe255e4754df61043ce28b40ba7202cf7ac163873b7f4c5f9969930e9d7cd3691e178739304eed1adc42bb6c628
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^1.0.1":
+  version: 1.6.8
+  resolution: "@floating-ui/dom@npm:1.6.8"
+  dependencies:
+    "@floating-ui/core": "npm:^1.6.0"
+    "@floating-ui/utils": "npm:^0.2.5"
+  checksum: d52e257bbf1f04da7882d847dfe128783966a19e6d6a9e6d09d57d32bdc7255efce7ae15c3be781e349ae3b18c4575e910afde3e73ae57c31763e8a799f19f45
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.5":
+  version: 0.2.5
+  resolution: "@floating-ui/utils@npm:0.2.5"
+  checksum: 9e1c7330433c3a8f226c5a44ed1dcdda13b313c4126ce3281f970d1e471b1c9fd9e1559cc76a0592af25d55a3f81afe1a5778aa7b80e51c9fa01930cd1d5557e
   languageName: node
   linkType: hard
 
@@ -214,10 +265,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.4.15":
-  version: 1.4.15
-  resolution: "@jridgewell/sourcemap-codec@npm:1.4.15"
-  checksum: 0c6b5ae663087558039052a626d2d7ed5208da36cfd707dcc5cea4a07cfc918248403dcb5989a8f7afaf245ce0573b7cc6fd94c4a30453bd10e44d9363940ba5
+"@jridgewell/sourcemap-codec@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@jridgewell/sourcemap-codec@npm:1.5.0"
+  checksum: 2eb864f276eb1096c3c11da3e9bb518f6d9fc0023c78344cdc037abadc725172c70314bdb360f2d4b7bffec7f5d657ce006816bc5d4ecb35e61b66132db00c18
   languageName: node
   linkType: hard
 
@@ -235,11 +286,11 @@ __metadata:
   linkType: hard
 
 "@npmcli/fs@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@npmcli/fs@npm:3.1.0"
+  version: 3.1.1
+  resolution: "@npmcli/fs@npm:3.1.1"
   dependencies:
     semver: "npm:^7.3.5"
-  checksum: 162b4a0b8705cd6f5c2470b851d1dc6cd228c86d2170e1769d738c1fbb69a87160901411c3c035331e9e99db72f1f1099a8b734bf1637cc32b9a5be1660e4e1e
+  checksum: c37a5b4842bfdece3d14dfdb054f73fe15ed2d3da61b34ff76629fb5b1731647c49166fd2a8bf8b56fcfa51200382385ea8909a3cbecdad612310c114d3f6c99
   languageName: node
   linkType: hard
 
@@ -250,188 +301,216 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/rollup-android-arm-eabi@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-android-arm-eabi@npm:4.12.0"
+"@popperjs/core@npm:@sxzz/popperjs-es@^2.11.7":
+  version: 2.11.7
+  resolution: "@sxzz/popperjs-es@npm:2.11.7"
+  checksum: 5027bd98ff98caad74a20379287cb7e8bf4263eeb58e749c97dffe64e900bdd49f9e78c188c8f3cf10c0a3d4e8054ea7a11b2cc15fb67139a4c40b2a5a61b259
+  languageName: node
+  linkType: hard
+
+"@rollup/rollup-android-arm-eabi@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-android-arm-eabi@npm:4.19.2"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@rollup/rollup-android-arm64@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-android-arm64@npm:4.12.0"
+"@rollup/rollup-android-arm64@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-android-arm64@npm:4.19.2"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rollup/rollup-darwin-arm64@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-darwin-arm64@npm:4.12.0"
+"@rollup/rollup-darwin-arm64@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-darwin-arm64@npm:4.19.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rollup/rollup-darwin-x64@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-darwin-x64@npm:4.12.0"
+"@rollup/rollup-darwin-x64@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-darwin-x64@npm:4.19.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@rollup/rollup-linux-arm-gnueabihf@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-linux-arm-gnueabihf@npm:4.12.0"
-  conditions: os=linux & cpu=arm
+"@rollup/rollup-linux-arm-gnueabihf@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-arm-gnueabihf@npm:4.19.2"
+  conditions: os=linux & cpu=arm & libc=glibc
   languageName: node
   linkType: hard
 
-"@rollup/rollup-linux-arm64-gnu@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-linux-arm64-gnu@npm:4.12.0"
+"@rollup/rollup-linux-arm-musleabihf@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-arm-musleabihf@npm:4.19.2"
+  conditions: os=linux & cpu=arm & libc=musl
+  languageName: node
+  linkType: hard
+
+"@rollup/rollup-linux-arm64-gnu@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-arm64-gnu@npm:4.19.2"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rollup/rollup-linux-arm64-musl@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-linux-arm64-musl@npm:4.12.0"
+"@rollup/rollup-linux-arm64-musl@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-arm64-musl@npm:4.19.2"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@rollup/rollup-linux-riscv64-gnu@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-linux-riscv64-gnu@npm:4.12.0"
+"@rollup/rollup-linux-powerpc64le-gnu@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-powerpc64le-gnu@npm:4.19.2"
+  conditions: os=linux & cpu=ppc64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@rollup/rollup-linux-riscv64-gnu@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-riscv64-gnu@npm:4.19.2"
   conditions: os=linux & cpu=riscv64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rollup/rollup-linux-x64-gnu@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-linux-x64-gnu@npm:4.12.0"
+"@rollup/rollup-linux-s390x-gnu@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-s390x-gnu@npm:4.19.2"
+  conditions: os=linux & cpu=s390x & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@rollup/rollup-linux-x64-gnu@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-x64-gnu@npm:4.19.2"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rollup/rollup-linux-x64-musl@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-linux-x64-musl@npm:4.12.0"
+"@rollup/rollup-linux-x64-musl@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-linux-x64-musl@npm:4.19.2"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@rollup/rollup-win32-arm64-msvc@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-win32-arm64-msvc@npm:4.12.0"
+"@rollup/rollup-win32-arm64-msvc@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-win32-arm64-msvc@npm:4.19.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rollup/rollup-win32-ia32-msvc@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-win32-ia32-msvc@npm:4.12.0"
+"@rollup/rollup-win32-ia32-msvc@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-win32-ia32-msvc@npm:4.19.2"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@rollup/rollup-win32-x64-msvc@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@rollup/rollup-win32-x64-msvc@npm:4.12.0"
+"@rollup/rollup-win32-x64-msvc@npm:4.19.2":
+  version: 4.19.2
+  resolution: "@rollup/rollup-win32-x64-msvc@npm:4.19.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@tauri-apps/api@npm:^1.5.2":
-  version: 1.5.3
-  resolution: "@tauri-apps/api@npm:1.5.3"
-  checksum: 7709c368603881d1f615eb334261339b55f479e44af112702ce42e65a7bf1cfd48e95a7ad3efec9d275d78c09af43fe0b7c3acffc7cef6a14a470a457b807272
+"@tauri-apps/api@npm:>=2.0.0-beta.0, @tauri-apps/api@npm:^2.0.0-beta.16":
+  version: 2.0.0-beta.16
+  resolution: "@tauri-apps/api@npm:2.0.0-beta.16"
+  checksum: 33242595a2c73ddb734b56027104584700980b4bf4c67cc3e137acd58235077b56c38d5f871cd20da63c07f59355fa6139377edfb84c3cbf05d480b7772148d6
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-darwin-arm64@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-darwin-arm64@npm:1.5.9"
+"@tauri-apps/cli-darwin-arm64@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-darwin-arm64@npm:2.0.0-beta.23"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-darwin-x64@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-darwin-x64@npm:1.5.9"
+"@tauri-apps/cli-darwin-x64@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-darwin-x64@npm:2.0.0-beta.23"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-arm-gnueabihf@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-linux-arm-gnueabihf@npm:1.5.9"
+"@tauri-apps/cli-linux-arm-gnueabihf@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-linux-arm-gnueabihf@npm:2.0.0-beta.23"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-arm64-gnu@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-linux-arm64-gnu@npm:1.5.9"
+"@tauri-apps/cli-linux-arm64-gnu@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-linux-arm64-gnu@npm:2.0.0-beta.23"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-arm64-musl@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-linux-arm64-musl@npm:1.5.9"
+"@tauri-apps/cli-linux-arm64-musl@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-linux-arm64-musl@npm:2.0.0-beta.23"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-x64-gnu@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-linux-x64-gnu@npm:1.5.9"
+"@tauri-apps/cli-linux-x64-gnu@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-linux-x64-gnu@npm:2.0.0-beta.23"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-x64-musl@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-linux-x64-musl@npm:1.5.9"
+"@tauri-apps/cli-linux-x64-musl@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-linux-x64-musl@npm:2.0.0-beta.23"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-win32-arm64-msvc@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-win32-arm64-msvc@npm:1.5.9"
+"@tauri-apps/cli-win32-arm64-msvc@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-win32-arm64-msvc@npm:2.0.0-beta.23"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-win32-ia32-msvc@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-win32-ia32-msvc@npm:1.5.9"
+"@tauri-apps/cli-win32-ia32-msvc@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-win32-ia32-msvc@npm:2.0.0-beta.23"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-win32-x64-msvc@npm:1.5.9":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli-win32-x64-msvc@npm:1.5.9"
+"@tauri-apps/cli-win32-x64-msvc@npm:2.0.0-beta.23":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli-win32-x64-msvc@npm:2.0.0-beta.23"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli@npm:^1.5.8":
-  version: 1.5.9
-  resolution: "@tauri-apps/cli@npm:1.5.9"
+"@tauri-apps/cli@npm:>=2.0.0-beta.0":
+  version: 2.0.0-beta.23
+  resolution: "@tauri-apps/cli@npm:2.0.0-beta.23"
   dependencies:
-    "@tauri-apps/cli-darwin-arm64": "npm:1.5.9"
-    "@tauri-apps/cli-darwin-x64": "npm:1.5.9"
-    "@tauri-apps/cli-linux-arm-gnueabihf": "npm:1.5.9"
-    "@tauri-apps/cli-linux-arm64-gnu": "npm:1.5.9"
-    "@tauri-apps/cli-linux-arm64-musl": "npm:1.5.9"
-    "@tauri-apps/cli-linux-x64-gnu": "npm:1.5.9"
-    "@tauri-apps/cli-linux-x64-musl": "npm:1.5.9"
-    "@tauri-apps/cli-win32-arm64-msvc": "npm:1.5.9"
-    "@tauri-apps/cli-win32-ia32-msvc": "npm:1.5.9"
-    "@tauri-apps/cli-win32-x64-msvc": "npm:1.5.9"
+    "@tauri-apps/cli-darwin-arm64": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-darwin-x64": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-linux-arm-gnueabihf": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-linux-arm64-gnu": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-linux-arm64-musl": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-linux-x64-gnu": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-linux-x64-musl": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-win32-arm64-msvc": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-win32-ia32-msvc": "npm:2.0.0-beta.23"
+    "@tauri-apps/cli-win32-x64-msvc": "npm:2.0.0-beta.23"
   dependenciesMeta:
     "@tauri-apps/cli-darwin-arm64":
       optional: true
@@ -455,7 +534,34 @@ __metadata:
       optional: true
   bin:
     tauri: tauri.js
-  checksum: 511fbe90e0bad09ca29a803d833b2fb31c02f87fdd13946390dae129142119fd22b21111d90e21a288f0bc3c99c26e7163f1ec06c7ef460419ffd121d8a91495
+  checksum: 0259d606af56186b8ef1172e88e6ee4794e16b84d98946315cc7b56cc74c666dd6a8e1fbe5399b033230601676248942a0dbeca713c68ec1c4b73214b07a5442
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/plugin-global-shortcut@npm:^2.0.0-beta.7":
+  version: 2.0.0-beta.8
+  resolution: "@tauri-apps/plugin-global-shortcut@npm:2.0.0-beta.8"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.0.0-beta.16"
+  checksum: abaa57ccca7f878c5b27240bfe734ad63b9295e0db6d0fd2059461d4e3372c435052c4e4bac8ba0b461ee1089b07c3815614e62b2c3cdc9256f19e7743ed325e
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/plugin-log@npm:^2.0.0-beta.9":
+  version: 2.0.0-beta.9
+  resolution: "@tauri-apps/plugin-log@npm:2.0.0-beta.9"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.0.0-beta.16"
+  checksum: 2b84eaf588d39e66263c88a991cd660fafb187f4120342b90343db9de44d6ce684d5f0d761f275d457a1eabb739413afc721e360458fd0f2cc2dba962474e66e
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/plugin-shell@npm:>=2.0.0-beta.0":
+  version: 2.0.0-beta.9
+  resolution: "@tauri-apps/plugin-shell@npm:2.0.0-beta.9"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.0.0-beta.16"
+  checksum: 70161efae534d3d8bb94d938be403c5cb6f94a66a0143737551b341aa961bf0ccf92a52f6806b688616cfd47162925cf5294b8540ce5f4514ebf0d7b7dbe3afc
   languageName: node
   linkType: hard
 
@@ -466,171 +572,231 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash-es@npm:^4.17.6":
+  version: 4.17.12
+  resolution: "@types/lodash-es@npm:4.17.12"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: 5d12d2cede07f07ab067541371ed1b838a33edb3c35cb81b73284e93c6fd0c4bbeaefee984e69294bffb53f62d7272c5d679fdba8e595ff71e11d00f2601dde0
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*, @types/lodash@npm:^4.14.182":
+  version: 4.17.7
+  resolution: "@types/lodash@npm:4.17.7"
+  checksum: 40c965b5ffdcf7ff5c9105307ee08b782da228c01b5c0529122c554c64f6b7168fc8f11dc79aa7bae4e67e17efafaba685dc3a47e294dbf52a65ed2b67100561
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^20.11.19":
-  version: 20.11.19
-  resolution: "@types/node@npm:20.11.19"
+  version: 20.14.14
+  resolution: "@types/node@npm:20.14.14"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: f451ef0a1d78f29c57bad7b77e49ebec945f2a6d0d7a89851d7e185ee9fe7ad94d651c0dfbcb7858c9fa791310c8b40a881e2260f56bd3c1b7e7ae92723373ae
+  checksum: 4fc8d368df2b6f5497698327b30db68d7d20e32221ce7d057fb15cbd5834685b2fde0440609e4cb2204e5d305b928f008faf41b950a425f3fd55b60cb1b997cf
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:^4.2.3":
-  version: 4.6.2
-  resolution: "@vitejs/plugin-vue@npm:4.6.2"
+"@types/web-bluetooth@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@types/web-bluetooth@npm:0.0.16"
+  checksum: 9a265fdd048319e174f9a0ae2dfb748d0b3e07f888d9797f89dd78b96d680fd304fbfa9fd0e11ccf283bd6a441641333ec8c3184e61a50c7ee61507add63f0a2
+  languageName: node
+  linkType: hard
+
+"@vitejs/plugin-vue@npm:^5.0.5":
+  version: 5.1.2
+  resolution: "@vitejs/plugin-vue@npm:5.1.2"
   peerDependencies:
-    vite: ^4.0.0 || ^5.0.0
+    vite: ^5.0.0
     vue: ^3.2.25
-  checksum: 8a8eb974936e4f0c7a66924240d122cd3a61af34498d7260f5920cf7a44ef4ef60e025a3f5d29df88e671ba32d5999c0fe1bc11d46bd838f51aa3a37a8f272c5
+  checksum: eb0015d97bd78a754135d4dbc74486c9da9308ce09e09b4e310e4c55e68b6202f28591fef1bf03ee8dca1d0c8a3c95e7dd8ea32c3933d9440e5a38738c52edcc
   languageName: node
   linkType: hard
 
-"@volar/language-core@npm:1.11.1, @volar/language-core@npm:~1.11.1":
-  version: 1.11.1
-  resolution: "@volar/language-core@npm:1.11.1"
+"@volar/language-core@npm:2.4.0-alpha.18, @volar/language-core@npm:~2.4.0-alpha.18":
+  version: 2.4.0-alpha.18
+  resolution: "@volar/language-core@npm:2.4.0-alpha.18"
   dependencies:
-    "@volar/source-map": "npm:1.11.1"
-  checksum: 92c4439e3a9ccc534c970031388c318740f6fa032283d03e136c6c8c0228f549c68a7c363af1a28252617a0dca6069e14028329ac906d5acf1912931d0cdcb69
+    "@volar/source-map": "npm:2.4.0-alpha.18"
+  checksum: 1cf2392997b7b197c3761994b694fdfe4d4fa7659c19760b983208c699fdacda01fb46e94740ee9e1db4771d834ec0fabdfb62b74a6ed0c0b90d15b762556338
   languageName: node
   linkType: hard
 
-"@volar/source-map@npm:1.11.1, @volar/source-map@npm:~1.11.1":
-  version: 1.11.1
-  resolution: "@volar/source-map@npm:1.11.1"
-  dependencies:
-    muggle-string: "npm:^0.3.1"
-  checksum: 0bfc639889802705f8036ea8b2052a95a4d691a68bc2b6744ba8b9d312d887393dd3278101180a5ee5304972899d493972a483afafd41e097968746c77d724cb
+"@volar/source-map@npm:2.4.0-alpha.18":
+  version: 2.4.0-alpha.18
+  resolution: "@volar/source-map@npm:2.4.0-alpha.18"
+  checksum: f7b662b50b1d0c14741e96f5f7e2ea887377b2c421d946ff919bfbbfc1dab0b7e76861cc525c1161b24005238d8362bab1c1637c393b65137e4922b3d2309559
   languageName: node
   linkType: hard
 
-"@volar/typescript@npm:~1.11.1":
-  version: 1.11.1
-  resolution: "@volar/typescript@npm:1.11.1"
+"@volar/typescript@npm:~2.4.0-alpha.18":
+  version: 2.4.0-alpha.18
+  resolution: "@volar/typescript@npm:2.4.0-alpha.18"
   dependencies:
-    "@volar/language-core": "npm:1.11.1"
+    "@volar/language-core": "npm:2.4.0-alpha.18"
     path-browserify: "npm:^1.0.1"
-  checksum: 86fe153db3a14d8eb3632784a1d7fcbfbfb51fa5517c3878bfdd49ee8d15a83b1a09f9c589454b7396454c104d3a8e2db3a987dc99b37c33816772fc3e292bf2
+    vscode-uri: "npm:^3.0.8"
+  checksum: 0a033423f5dac8a4ac88af012025bb0f7d4457a71e484610b1afa7f88888f2ffffd5141069348051b6c03d5002ffbb18db944cab64849d5d7bab937968e6d277
   languageName: node
   linkType: hard
 
-"@vue/compiler-core@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/compiler-core@npm:3.4.19"
+"@vue/compiler-core@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/compiler-core@npm:3.4.35"
   dependencies:
-    "@babel/parser": "npm:^7.23.9"
-    "@vue/shared": "npm:3.4.19"
+    "@babel/parser": "npm:^7.24.7"
+    "@vue/shared": "npm:3.4.35"
     entities: "npm:^4.5.0"
     estree-walker: "npm:^2.0.2"
-    source-map-js: "npm:^1.0.2"
-  checksum: 94b021dc5d29564f94aa0bb7a5b03203e68b332ed165799f88c2de579a58730f4eca9c8c92d041a03843a3b8e378857485f7672be880781fe53133bfafb93d79
+    source-map-js: "npm:^1.2.0"
+  checksum: 34fe4aaee292cda4e6fadeca6b85e0ca635c6b57aad47054e9764bc56a5dd7621c9ac9df1021b612f336d215add8e8f8674606074471ddac5ea36a759cf59e86
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.4.19, @vue/compiler-dom@npm:^3.3.0":
-  version: 3.4.19
-  resolution: "@vue/compiler-dom@npm:3.4.19"
+"@vue/compiler-dom@npm:3.4.35, @vue/compiler-dom@npm:^3.4.0":
+  version: 3.4.35
+  resolution: "@vue/compiler-dom@npm:3.4.35"
   dependencies:
-    "@vue/compiler-core": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
-  checksum: 348aecff6ade0b023ff6b7bec572ba3fa6e2450530f15acb743a5679c3612fd6d3b15f87aafa00e1d8258f637397657e2e6ae1546c41f838da23a631e9b276f8
+    "@vue/compiler-core": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
+  checksum: e1470ae29a87d4be187a9030f0048df134d6c4672fa24522ce9c3476b9495e7818764512f1ae57b2dac1dee1a87374f68da65ce9e3a70a02f4c9f44f029d19ef
   languageName: node
   linkType: hard
 
-"@vue/compiler-sfc@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/compiler-sfc@npm:3.4.19"
+"@vue/compiler-sfc@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/compiler-sfc@npm:3.4.35"
   dependencies:
-    "@babel/parser": "npm:^7.23.9"
-    "@vue/compiler-core": "npm:3.4.19"
-    "@vue/compiler-dom": "npm:3.4.19"
-    "@vue/compiler-ssr": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
+    "@babel/parser": "npm:^7.24.7"
+    "@vue/compiler-core": "npm:3.4.35"
+    "@vue/compiler-dom": "npm:3.4.35"
+    "@vue/compiler-ssr": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
     estree-walker: "npm:^2.0.2"
-    magic-string: "npm:^0.30.6"
-    postcss: "npm:^8.4.33"
-    source-map-js: "npm:^1.0.2"
-  checksum: eb3c6a136c677cf31b624a27f3c23a6511f54b97607a66ef3625ab25ff56370cc589fe2dfa3ef487746a15f4e4033e63e261eb3a76842a5bbe149da1048dfa46
+    magic-string: "npm:^0.30.10"
+    postcss: "npm:^8.4.40"
+    source-map-js: "npm:^1.2.0"
+  checksum: 479363ad7e6ce3f8be864752e7dd006af820450267c4a12f6437d2da27596d59d0b9afc9c4a4272c2e0f34f66ad044c1479539feeceaee1231cc384e824922d6
   languageName: node
   linkType: hard
 
-"@vue/compiler-ssr@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/compiler-ssr@npm:3.4.19"
+"@vue/compiler-ssr@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/compiler-ssr@npm:3.4.35"
   dependencies:
-    "@vue/compiler-dom": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
-  checksum: 190dfbe89ad6f662276684ef2931fd67c6e6b7e3d008d6368498481f0632cf4ad06db257f5345336403404050e1791f3ba719dc460029cf9fbbe24abe39adcff
+    "@vue/compiler-dom": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
+  checksum: 3493e17998a6a60f75f63882dcdb15547c586960450fb0ff1576dccc0e2bc35a98a9b70f9b66bdcd05d1fb909d9554e3ac95c1206a8c9b0003ded92a96d3c3c5
   languageName: node
   linkType: hard
 
-"@vue/language-core@npm:1.8.27":
-  version: 1.8.27
-  resolution: "@vue/language-core@npm:1.8.27"
+"@vue/compiler-vue2@npm:^2.7.16":
+  version: 2.7.16
+  resolution: "@vue/compiler-vue2@npm:2.7.16"
   dependencies:
-    "@volar/language-core": "npm:~1.11.1"
-    "@volar/source-map": "npm:~1.11.1"
-    "@vue/compiler-dom": "npm:^3.3.0"
-    "@vue/shared": "npm:^3.3.0"
+    de-indent: "npm:^1.0.2"
+    he: "npm:^1.2.0"
+  checksum: c76c3fad770b9a7da40b314116cc9da173da20e5fd68785c8ed8dd8a87d02f239545fa296e16552e040ec86b47bfb18283b39447b250c2e76e479bd6ae475bb3
+  languageName: node
+  linkType: hard
+
+"@vue/language-core@npm:2.0.29":
+  version: 2.0.29
+  resolution: "@vue/language-core@npm:2.0.29"
+  dependencies:
+    "@volar/language-core": "npm:~2.4.0-alpha.18"
+    "@vue/compiler-dom": "npm:^3.4.0"
+    "@vue/compiler-vue2": "npm:^2.7.16"
+    "@vue/shared": "npm:^3.4.0"
     computeds: "npm:^0.0.1"
     minimatch: "npm:^9.0.3"
-    muggle-string: "npm:^0.3.1"
+    muggle-string: "npm:^0.4.1"
     path-browserify: "npm:^1.0.1"
-    vue-template-compiler: "npm:^2.7.14"
   peerDependencies:
     typescript: "*"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 2018214d8ce2643d19e8e84eddaeacddca28b2980984d7916d97f97556c3716be184cf9f8c4f506d072a11f265401e3bc0391117cf7cfcc1e4a25048f4432dc7
+  checksum: 917a564cf4e3f84fe1f3bbcb5374259d6107beb631e6aa763a85720b7533a4d8ae27c5cfb95719b44a9ce0720a9c04d04213365ecad03ec0db9503dfa712bce9
   languageName: node
   linkType: hard
 
-"@vue/reactivity@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/reactivity@npm:3.4.19"
+"@vue/reactivity@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/reactivity@npm:3.4.35"
   dependencies:
-    "@vue/shared": "npm:3.4.19"
-  checksum: a3febaa2a1a59b428d341db7099238a6182c63d21f1975cf5c3b107a653521163e34ae865d9fca8589b8d3e0d63f3257b8ec57ae276ff47aded5b9797f9583f8
+    "@vue/shared": "npm:3.4.35"
+  checksum: b19a8b21b3991b0569ab650338f9344c74f1f0fbe6ec488e5db96623b0397f808635fd055cacb7ff61410760cbc8e0ffc320b5c99aca18c456ddbc37f8ce4180
   languageName: node
   linkType: hard
 
-"@vue/runtime-core@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/runtime-core@npm:3.4.19"
+"@vue/runtime-core@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/runtime-core@npm:3.4.35"
   dependencies:
-    "@vue/reactivity": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
-  checksum: 03e399a3e5183dd89e471d57a392006bf8145dcd4a2db903e4a07a2951ddd8d258791392da2c9ca8e76def0c9657fd3fbeda8efe0f053099cd73afedd8e9cd61
+    "@vue/reactivity": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
+  checksum: 64c1bf1e9e7af2c4bff7879842b6c43e575b054cd8b13a65142568a668e33636ca26a05253e5aaff8ba4c579476be99b9ef01e6fe672883f848e6cf36a39bf5c
   languageName: node
   linkType: hard
 
-"@vue/runtime-dom@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/runtime-dom@npm:3.4.19"
+"@vue/runtime-dom@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/runtime-dom@npm:3.4.35"
   dependencies:
-    "@vue/runtime-core": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
+    "@vue/reactivity": "npm:3.4.35"
+    "@vue/runtime-core": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
     csstype: "npm:^3.1.3"
-  checksum: b26ef26d06fd89b7549534c9d53eb10047b4adbea305e80730bd50e17b4859ea67ba782af71624cafc7c83f5249da71fc101c566d76e32437a4645303656b51b
+  checksum: 80fefde3b30110125f36af59cd4d875fc5c550a1033e4a91287574a51efea486713759739f16ea5283ac1b23bd8ff08194abd87073a9074c6fb484a6c63e0754
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.4.19":
-  version: 3.4.19
-  resolution: "@vue/server-renderer@npm:3.4.19"
+"@vue/server-renderer@npm:3.4.35":
+  version: 3.4.35
+  resolution: "@vue/server-renderer@npm:3.4.35"
   dependencies:
-    "@vue/compiler-ssr": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
+    "@vue/compiler-ssr": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
   peerDependencies:
-    vue: 3.4.19
-  checksum: 2156362185d62222db060c66d7fa31d2420708f22e491fe1b616008e931be7fcf9cf47e9cca5135359839c269389b475492657948ea3d6756f6a790fcddc34bf
+    vue: 3.4.35
+  checksum: 6ff8c36ee572c243ae394368d0d22288e708cdc7a316ab6e3ea32756d3cd3b08dd4d49a5f4faf511a894122a3d43cb3a2c400ac37c761d351779dd00e5470fbb
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.4.19, @vue/shared@npm:^3.3.0":
-  version: 3.4.19
-  resolution: "@vue/shared@npm:3.4.19"
-  checksum: bd4a060b0064f0e183e5bb8e346f3be6ff7046793b0765a407e5334860ffd646b28a4ef53652b644e83bd473cea91189377cd83c933bb638d1da143d28f779ff
+"@vue/shared@npm:3.4.35, @vue/shared@npm:^3.4.0":
+  version: 3.4.35
+  resolution: "@vue/shared@npm:3.4.35"
+  checksum: a3711abaf4e5be996112387f2304bf5d51d246c680d93eb8894430b37fe3f0edc9f72428ccbb3ed91656e947d3ac9bdcad41f5c6e51bd1121e222901dab8cb10
+  languageName: node
+  linkType: hard
+
+"@vueuse/core@npm:^9.1.0":
+  version: 9.13.0
+  resolution: "@vueuse/core@npm:9.13.0"
+  dependencies:
+    "@types/web-bluetooth": "npm:^0.0.16"
+    "@vueuse/metadata": "npm:9.13.0"
+    "@vueuse/shared": "npm:9.13.0"
+    vue-demi: "npm:*"
+  checksum: 59791dbfad5725810139c22adb4d8266ca9de419a4b252cb99f1b2a0bdb2f500988a7aabd42583c255fa45499ebb43dafc9d6ddc45fdf09ef15fdadd02958f42
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:9.13.0":
+  version: 9.13.0
+  resolution: "@vueuse/metadata@npm:9.13.0"
+  checksum: c2a8a85946f382b9b51b4e96f17f0913091e7c271fbde565b59d3c4fd8f67f2f34778e002d65dd78c420700781e725c05d72cb65acec9c773a423116e8d49cd4
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:9.13.0":
+  version: 9.13.0
+  resolution: "@vueuse/shared@npm:9.13.0"
+  dependencies:
+    vue-demi: "npm:*"
+  checksum: 22c453dc3c9ccd389e32d4dcfb6e6facfbb29860376c0b1c4d40d2745edd733857d1a1f82835c1d698dedf0c9f697bd9d1265e4e70a6702c85b61cc295bd7352
   languageName: node
   linkType: hard
 
@@ -690,6 +856,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"async-validator@npm:^4.2.5":
+  version: 4.2.5
+  resolution: "async-validator@npm:4.2.5"
+  checksum: 0ec09ee388aae5f6b037a320049a369b681ca9b341b28e2693e50e89b5c4c64c057a2c57f9fc1c18dd020823809d8af4b72b278e0a7a872c9e3accd5c4c3ce3a
+  languageName: node
+  linkType: hard
+
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -707,8 +880,8 @@ __metadata:
   linkType: hard
 
 "cacache@npm:^18.0.0":
-  version: 18.0.2
-  resolution: "cacache@npm:18.0.2"
+  version: 18.0.4
+  resolution: "cacache@npm:18.0.4"
   dependencies:
     "@npmcli/fs": "npm:^3.1.0"
     fs-minipass: "npm:^3.0.0"
@@ -722,22 +895,28 @@ __metadata:
     ssri: "npm:^10.0.0"
     tar: "npm:^6.1.11"
     unique-filename: "npm:^3.0.0"
-  checksum: 7992665305cc251a984f4fdbab1449d50e88c635bc43bf2785530c61d239c61b349e5734461baa461caaee65f040ab14e2d58e694f479c0810cffd181ba5eabc
+  checksum: 6c055bafed9de4f3dcc64ac3dc7dd24e863210902b7c470eb9ce55a806309b3efff78033e3d8b4f7dcc5d467f2db43c6a2857aaaf26f0094b8a351d44c42179f
   languageName: node
   linkType: hard
 
-"checkList@workspace:.":
+"check-list@workspace:.":
   version: 0.0.0-use.local
-  resolution: "checkList@workspace:."
+  resolution: "check-list@workspace:."
   dependencies:
-    "@tauri-apps/api": "npm:^1.5.2"
-    "@tauri-apps/cli": "npm:^1.5.8"
+    "@element-plus/icons": "npm:^0.0.11"
+    "@tauri-apps/api": "npm:>=2.0.0-beta.0"
+    "@tauri-apps/cli": "npm:>=2.0.0-beta.0"
+    "@tauri-apps/plugin-global-shortcut": "npm:^2.0.0-beta.7"
+    "@tauri-apps/plugin-log": "npm:^2.0.0-beta.9"
+    "@tauri-apps/plugin-shell": "npm:>=2.0.0-beta.0"
     "@types/node": "npm:^20.11.19"
-    "@vitejs/plugin-vue": "npm:^4.2.3"
-    typescript: "npm:^5.0.2"
-    vite: "npm:^5.0.0"
-    vue: "npm:^3.3.4"
-    vue-tsc: "npm:^1.8.5"
+    "@vitejs/plugin-vue": "npm:^5.0.5"
+    element-plus: "npm:^2.7.7"
+    rollup-plugin-visualizer: "npm:^5.12.0"
+    typescript: "npm:^5.2.2"
+    vite: "npm:^5.3.1"
+    vue: "npm:^3.4.35"
+    vue-tsc: "npm:^2.0.22"
   languageName: unknown
   linkType: soft
 
@@ -752,6 +931,17 @@ __metadata:
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
   checksum: 1f90262d5f6230a17e27d0c190b09d47ebe7efdd76a03b5a1127863f7b3c9aec4c3e6c8bb3a7bbf81d553d56a1fd35728f5a8ef4c63f867ac8d690109742a8c1
+  languageName: node
+  linkType: hard
+
+"cliui@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "cliui@npm:8.0.1"
+  dependencies:
+    string-width: "npm:^4.2.0"
+    strip-ansi: "npm:^6.0.1"
+    wrap-ansi: "npm:^7.0.0"
+  checksum: 4bda0f09c340cbb6dfdc1ed508b3ca080f12992c18d68c6be4d9cf51756033d5266e61ec57529e610dacbf4da1c634423b0c1b11037709cc6b09045cbd815df5
   languageName: node
   linkType: hard
 
@@ -796,6 +986,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dayjs@npm:^1.11.3":
+  version: 1.11.12
+  resolution: "dayjs@npm:1.11.12"
+  checksum: 9673d37f3f9ad8a91caaeae9b3fea9a0010c81c7f58599fb9d860bc3359b86632fbff8eb7dddc86c2acaab01c5e6860bc672952f17b58c9286140c52b077c8e4
+  languageName: node
+  linkType: hard
+
 "de-indent@npm:^1.0.2":
   version: 1.0.2
   resolution: "de-indent@npm:1.0.2"
@@ -804,14 +1001,21 @@ __metadata:
   linkType: hard
 
 "debug@npm:4, debug@npm:^4.3.4":
-  version: 4.3.4
-  resolution: "debug@npm:4.3.4"
+  version: 4.3.6
+  resolution: "debug@npm:4.3.6"
   dependencies:
     ms: "npm:2.1.2"
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: cedbec45298dd5c501d01b92b119cd3faebe5438c3917ff11ae1bff86a6c722930ac9c8659792824013168ba6db7c4668225d845c633fbdafbbf902a6389f736
+  checksum: 3293416bff072389c101697d4611c402a6bacd1900ac20c0492f61a9cdd6b3b29750fc7f5e299f8058469ef60ff8fb79b86395a30374fbd2490113c1c7112285
+  languageName: node
+  linkType: hard
+
+"define-lazy-prop@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "define-lazy-prop@npm:2.0.0"
+  checksum: db6c63864a9d3b7dc9def55d52764968a5af296de87c1b2cc71d8be8142e445208071953649e0386a8cc37cfcf9a2067a47207f1eb9ff250c2a269658fdae422
   languageName: node
   linkType: hard
 
@@ -819,6 +1023,31 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
+  languageName: node
+  linkType: hard
+
+"element-plus@npm:^2.7.7":
+  version: 2.7.8
+  resolution: "element-plus@npm:2.7.8"
+  dependencies:
+    "@ctrl/tinycolor": "npm:^3.4.1"
+    "@element-plus/icons-vue": "npm:^2.3.1"
+    "@floating-ui/dom": "npm:^1.0.1"
+    "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7"
+    "@types/lodash": "npm:^4.14.182"
+    "@types/lodash-es": "npm:^4.17.6"
+    "@vueuse/core": "npm:^9.1.0"
+    async-validator: "npm:^4.2.5"
+    dayjs: "npm:^1.11.3"
+    escape-html: "npm:^1.0.3"
+    lodash: "npm:^4.17.21"
+    lodash-es: "npm:^4.17.21"
+    lodash-unified: "npm:^1.0.2"
+    memoize-one: "npm:^6.0.0"
+    normalize-wheel-es: "npm:^1.2.0"
+  peerDependencies:
+    vue: ^3.2.0
+  checksum: 422d88d1d550ae019082c38cb4291f46d1cdce29baa549b79ef309d7ef210858377e623f2f454e2c10c7dbaf62dc216ca64d4ddf261f56875f476d94925d33f7
   languageName: node
   linkType: hard
 
@@ -866,33 +1095,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.19.3":
-  version: 0.19.12
-  resolution: "esbuild@npm:0.19.12"
+"esbuild@npm:^0.21.3":
+  version: 0.21.5
+  resolution: "esbuild@npm:0.21.5"
   dependencies:
-    "@esbuild/aix-ppc64": "npm:0.19.12"
-    "@esbuild/android-arm": "npm:0.19.12"
-    "@esbuild/android-arm64": "npm:0.19.12"
-    "@esbuild/android-x64": "npm:0.19.12"
-    "@esbuild/darwin-arm64": "npm:0.19.12"
-    "@esbuild/darwin-x64": "npm:0.19.12"
-    "@esbuild/freebsd-arm64": "npm:0.19.12"
-    "@esbuild/freebsd-x64": "npm:0.19.12"
-    "@esbuild/linux-arm": "npm:0.19.12"
-    "@esbuild/linux-arm64": "npm:0.19.12"
-    "@esbuild/linux-ia32": "npm:0.19.12"
-    "@esbuild/linux-loong64": "npm:0.19.12"
-    "@esbuild/linux-mips64el": "npm:0.19.12"
-    "@esbuild/linux-ppc64": "npm:0.19.12"
-    "@esbuild/linux-riscv64": "npm:0.19.12"
-    "@esbuild/linux-s390x": "npm:0.19.12"
-    "@esbuild/linux-x64": "npm:0.19.12"
-    "@esbuild/netbsd-x64": "npm:0.19.12"
-    "@esbuild/openbsd-x64": "npm:0.19.12"
-    "@esbuild/sunos-x64": "npm:0.19.12"
-    "@esbuild/win32-arm64": "npm:0.19.12"
-    "@esbuild/win32-ia32": "npm:0.19.12"
-    "@esbuild/win32-x64": "npm:0.19.12"
+    "@esbuild/aix-ppc64": "npm:0.21.5"
+    "@esbuild/android-arm": "npm:0.21.5"
+    "@esbuild/android-arm64": "npm:0.21.5"
+    "@esbuild/android-x64": "npm:0.21.5"
+    "@esbuild/darwin-arm64": "npm:0.21.5"
+    "@esbuild/darwin-x64": "npm:0.21.5"
+    "@esbuild/freebsd-arm64": "npm:0.21.5"
+    "@esbuild/freebsd-x64": "npm:0.21.5"
+    "@esbuild/linux-arm": "npm:0.21.5"
+    "@esbuild/linux-arm64": "npm:0.21.5"
+    "@esbuild/linux-ia32": "npm:0.21.5"
+    "@esbuild/linux-loong64": "npm:0.21.5"
+    "@esbuild/linux-mips64el": "npm:0.21.5"
+    "@esbuild/linux-ppc64": "npm:0.21.5"
+    "@esbuild/linux-riscv64": "npm:0.21.5"
+    "@esbuild/linux-s390x": "npm:0.21.5"
+    "@esbuild/linux-x64": "npm:0.21.5"
+    "@esbuild/netbsd-x64": "npm:0.21.5"
+    "@esbuild/openbsd-x64": "npm:0.21.5"
+    "@esbuild/sunos-x64": "npm:0.21.5"
+    "@esbuild/win32-arm64": "npm:0.21.5"
+    "@esbuild/win32-ia32": "npm:0.21.5"
+    "@esbuild/win32-x64": "npm:0.21.5"
   dependenciesMeta:
     "@esbuild/aix-ppc64":
       optional: true
@@ -942,7 +1171,21 @@ __metadata:
       optional: true
   bin:
     esbuild: bin/esbuild
-  checksum: 0f2d21ffe24ebead64843f87c3aebe2e703a5ed9feb086a0728b24907fac2eb9923e4a79857d3df9059c915739bd7a870dd667972eae325c67f478b592b8582d
+  checksum: fa08508adf683c3f399e8a014a6382a6b65542213431e26206c0720e536b31c09b50798747c2a105a4bbba1d9767b8d3615a74c2f7bf1ddf6d836cd11eb672de
+  languageName: node
+  linkType: hard
+
+"escalade@npm:^3.1.1":
+  version: 3.1.2
+  resolution: "escalade@npm:3.1.2"
+  checksum: 6b4adafecd0682f3aa1cd1106b8fff30e492c7015b178bc81b2d2f75106dabea6c6d6e8508fc491bd58e597c74abb0e8e2368f943ecb9393d4162e3c2f3cf287
+  languageName: node
+  linkType: hard
+
+"escape-html@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "escape-html@npm:1.0.3"
+  checksum: 524c739d776b36c3d29fa08a22e03e8824e3b2fd57500e5e44ecf3cc4707c34c60f9ca0781c0e33d191f2991161504c295e98f68c78fe7baa6e57081ec6ac0a3
   languageName: node
   linkType: hard
 
@@ -961,12 +1204,12 @@ __metadata:
   linkType: hard
 
 "foreground-child@npm:^3.1.0":
-  version: 3.1.1
-  resolution: "foreground-child@npm:3.1.1"
+  version: 3.2.1
+  resolution: "foreground-child@npm:3.2.1"
   dependencies:
     cross-spawn: "npm:^7.0.0"
     signal-exit: "npm:^4.0.1"
-  checksum: 9700a0285628abaeb37007c9a4d92bd49f67210f09067638774338e146c8e9c825c5c877f072b2f75f41dc6a2d0be8664f79ffc03f6576649f54a84fb9b47de0
+  checksum: 9a53a33dbd87090e9576bef65fb4a71de60f6863a8062a7b11bc1cbe3cc86d428677d7c0b9ef61cdac11007ac580006f78bd5638618d564cfd5e6fd713d6878f
   languageName: node
   linkType: hard
 
@@ -1007,18 +1250,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"get-caller-file@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "get-caller-file@npm:2.0.5"
+  checksum: c6c7b60271931fa752aeb92f2b47e355eac1af3a2673f47c9589e8f8a41adc74d45551c1bc57b5e66a80609f10ffb72b6f575e4370d61cc3f7f3aaff01757cde
+  languageName: node
+  linkType: hard
+
 "glob@npm:^10.2.2, glob@npm:^10.3.10":
-  version: 10.3.12
-  resolution: "glob@npm:10.3.12"
+  version: 10.4.5
+  resolution: "glob@npm:10.4.5"
   dependencies:
     foreground-child: "npm:^3.1.0"
-    jackspeak: "npm:^2.3.6"
-    minimatch: "npm:^9.0.1"
-    minipass: "npm:^7.0.4"
-    path-scurry: "npm:^1.10.2"
+    jackspeak: "npm:^3.1.2"
+    minimatch: "npm:^9.0.4"
+    minipass: "npm:^7.1.2"
+    package-json-from-dist: "npm:^1.0.0"
+    path-scurry: "npm:^1.11.1"
   bin:
     glob: dist/esm/bin.mjs
-  checksum: f60cefdc1cf3f958b2bb5823e1b233727f04916d489dc4641d76914f016e6704421e06a83cbb68b0cb1cb9382298b7a88075b844ad2127fc9727ea22b18b0711
+  checksum: 19a9759ea77b8e3ca0a43c2f07ecddc2ad46216b786bb8f993c445aee80d345925a21e5280c7b7c6c59e860a0154b84e4b2b60321fea92cd3c56b4a7489f160e
   languageName: node
   linkType: hard
 
@@ -1056,12 +1307,12 @@ __metadata:
   linkType: hard
 
 "https-proxy-agent@npm:^7.0.1":
-  version: 7.0.4
-  resolution: "https-proxy-agent@npm:7.0.4"
+  version: 7.0.5
+  resolution: "https-proxy-agent@npm:7.0.5"
   dependencies:
     agent-base: "npm:^7.0.2"
     debug: "npm:4"
-  checksum: bc4f7c38da32a5fc622450b6cb49a24ff596f9bd48dcedb52d2da3fa1c1a80e100fb506bd59b326c012f21c863c69b275c23de1a01d0b84db396822fdf25e52b
+  checksum: 2490e3acec397abeb88807db52cac59102d5ed758feee6df6112ab3ccd8325e8a1ce8bce6f4b66e5470eca102d31e425ace904242e4fa28dbe0c59c4bafa7b2c
   languageName: node
   linkType: hard
 
@@ -1098,6 +1349,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-docker@npm:^2.0.0, is-docker@npm:^2.1.1":
+  version: 2.2.1
+  resolution: "is-docker@npm:2.2.1"
+  bin:
+    is-docker: cli.js
+  checksum: e828365958d155f90c409cdbe958f64051d99e8aedc2c8c4cd7c89dcf35329daed42f7b99346f7828df013e27deb8f721cf9408ba878c76eb9e8290235fbcdcc
+  languageName: node
+  linkType: hard
+
 "is-fullwidth-code-point@npm:^3.0.0":
   version: 3.0.0
   resolution: "is-fullwidth-code-point@npm:3.0.0"
@@ -1109,6 +1369,15 @@ __metadata:
   version: 1.0.1
   resolution: "is-lambda@npm:1.0.1"
   checksum: 85fee098ae62ba6f1e24cf22678805473c7afd0fb3978a3aa260e354cb7bcb3a5806cf0a98403188465efedec41ab4348e8e4e79305d409601323855b3839d4d
+  languageName: node
+  linkType: hard
+
+"is-wsl@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "is-wsl@npm:2.2.0"
+  dependencies:
+    is-docker: "npm:^2.0.0"
+  checksum: a6fa2d370d21be487c0165c7a440d567274fbba1a817f2f0bfa41cc5e3af25041d84267baa22df66696956038a43973e72fca117918c91431920bdef490fa25e
   languageName: node
   linkType: hard
 
@@ -1126,16 +1395,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jackspeak@npm:^2.3.6":
-  version: 2.3.6
-  resolution: "jackspeak@npm:2.3.6"
+"jackspeak@npm:^3.1.2":
+  version: 3.4.3
+  resolution: "jackspeak@npm:3.4.3"
   dependencies:
     "@isaacs/cliui": "npm:^8.0.2"
     "@pkgjs/parseargs": "npm:^0.11.0"
   dependenciesMeta:
     "@pkgjs/parseargs":
       optional: true
-  checksum: f01d8f972d894cd7638bc338e9ef5ddb86f7b208ce177a36d718eac96ec86638a6efa17d0221b10073e64b45edc2ce15340db9380b1f5d5c5d000cbc517dc111
+  checksum: 6acc10d139eaefdbe04d2f679e6191b3abf073f111edf10b1de5302c97ec93fffeb2fdd8681ed17f16268aa9dd4f8c588ed9d1d3bffbbfa6e8bf897cbb3149b9
   languageName: node
   linkType: hard
 
@@ -1146,34 +1415,50 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash-es@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: fb407355f7e6cd523a9383e76e6b455321f0f153a6c9625e21a8827d10c54c2a2341bd2ae8d034358b60e07325e1330c14c224ff582d04612a46a4f0479ff2f2
+  languageName: node
+  linkType: hard
+
+"lodash-unified@npm:^1.0.2":
+  version: 1.0.3
+  resolution: "lodash-unified@npm:1.0.3"
+  peerDependencies:
+    "@types/lodash-es": "*"
+    lodash: "*"
+    lodash-es: "*"
+  checksum: eb82553ecca72d217677df73f13e99bd04fb14f0981a21fb56aed687cf5130ecec8f6fb25a9bfef9457df0e5964e2a0768b69e44c6c9f0cb114c941d759cb7dd
+  languageName: node
+  linkType: hard
+
+"lodash@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "lru-cache@npm:10.2.0"
-  checksum: c9847612aa2daaef102d30542a8d6d9b2c2bb36581c1bf0dc3ebf5e5f3352c772a749e604afae2e46873b930a9e9523743faac4e5b937c576ab29196774712ee
+  version: 10.4.3
+  resolution: "lru-cache@npm:10.4.3"
+  checksum: ebd04fbca961e6c1d6c0af3799adcc966a1babe798f685bb84e6599266599cd95d94630b10262f5424539bc4640107e8a33aa28585374abf561d30d16f4b39fb
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "lru-cache@npm:6.0.0"
+"magic-string@npm:^0.30.10":
+  version: 0.30.11
+  resolution: "magic-string@npm:0.30.11"
   dependencies:
-    yallist: "npm:^4.0.0"
-  checksum: cb53e582785c48187d7a188d3379c181b5ca2a9c78d2bce3e7dee36f32761d1c42983da3fe12b55cb74e1779fa94cdc2e5367c028a9b35317184ede0c07a30a9
-  languageName: node
-  linkType: hard
-
-"magic-string@npm:^0.30.6":
-  version: 0.30.7
-  resolution: "magic-string@npm:0.30.7"
-  dependencies:
-    "@jridgewell/sourcemap-codec": "npm:^1.4.15"
-  checksum: d1d949f7a53c37c6e685f4ea7b2b151c2fe0cc5af8f1f979ecba916f7d60d58f35309aaf4c8b09ce1aef7c160b957be39a38b52b478a91650750931e4ddd5daf
+    "@jridgewell/sourcemap-codec": "npm:^1.5.0"
+  checksum: b9eb370773d0bd90ca11a848753409d8e5309b1ad56d2a1aa49d6649da710a6d2fe7237ad1a643c5a5d3800de2b9946ed9690acdfc00e6cc1aeafff3ab1752c4
   languageName: node
   linkType: hard
 
 "make-fetch-happen@npm:^13.0.0":
-  version: 13.0.0
-  resolution: "make-fetch-happen@npm:13.0.0"
+  version: 13.0.1
+  resolution: "make-fetch-happen@npm:13.0.1"
   dependencies:
     "@npmcli/agent": "npm:^2.0.0"
     cacache: "npm:^18.0.0"
@@ -1184,27 +1469,26 @@ __metadata:
     minipass-flush: "npm:^1.0.5"
     minipass-pipeline: "npm:^1.2.4"
     negotiator: "npm:^0.6.3"
+    proc-log: "npm:^4.2.0"
     promise-retry: "npm:^2.0.1"
     ssri: "npm:^10.0.0"
-  checksum: 43b9f6dcbc6fe8b8604cb6396957c3698857a15ba4dbc38284f7f0e61f248300585ef1eb8cc62df54e9c724af977e45b5cdfd88320ef7f53e45070ed3488da55
+  checksum: df5f4dbb6d98153b751bccf4dc4cc500de85a96a9331db9805596c46aa9f99d9555983954e6c1266d9f981ae37a9e4647f42b9a4bb5466f867f4012e582c9e7e
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.1":
-  version: 9.0.4
-  resolution: "minimatch@npm:9.0.4"
-  dependencies:
-    brace-expansion: "npm:^2.0.1"
-  checksum: 2c16f21f50e64922864e560ff97c587d15fd491f65d92a677a344e970fe62aafdbeafe648965fa96d33c061b4d0eabfe0213466203dd793367e7f28658cf6414
+"memoize-one@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "memoize-one@npm:6.0.0"
+  checksum: 45c88e064fd715166619af72e8cf8a7a17224d6edf61f7a8633d740ed8c8c0558a4373876c9b8ffc5518c2b65a960266adf403cc215cb1e90f7e262b58991f54
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.3":
-  version: 9.0.3
-  resolution: "minimatch@npm:9.0.3"
+"minimatch@npm:^9.0.3, minimatch@npm:^9.0.4":
+  version: 9.0.5
+  resolution: "minimatch@npm:9.0.5"
   dependencies:
     brace-expansion: "npm:^2.0.1"
-  checksum: 85f407dcd38ac3e180f425e86553911d101455ca3ad5544d6a7cec16286657e4f8a9aa6695803025c55e31e35a91a2252b5dc8e7d527211278b8b65b4dbd5eac
+  checksum: de96cf5e35bdf0eab3e2c853522f98ffbe9a36c37797778d2665231ec1f20a9447a7e567cb640901f89e4daaa95ae5d70c65a9e8aa2bb0019b6facbc3c0575ed
   languageName: node
   linkType: hard
 
@@ -1218,8 +1502,8 @@ __metadata:
   linkType: hard
 
 "minipass-fetch@npm:^3.0.0":
-  version: 3.0.4
-  resolution: "minipass-fetch@npm:3.0.4"
+  version: 3.0.5
+  resolution: "minipass-fetch@npm:3.0.5"
   dependencies:
     encoding: "npm:^0.1.13"
     minipass: "npm:^7.0.3"
@@ -1228,7 +1512,7 @@ __metadata:
   dependenciesMeta:
     encoding:
       optional: true
-  checksum: 1b63c1f3313e88eeac4689f1b71c9f086598db9a189400e3ee960c32ed89e06737fa23976c9305c2d57464fb3fcdc12749d3378805c9d6176f5569b0d0ee8a75
+  checksum: 9d702d57f556274286fdd97e406fc38a2f5c8d15e158b498d7393b1105974b21249289ec571fa2b51e038a4872bfc82710111cf75fae98c662f3d6f95e72152b
   languageName: node
   linkType: hard
 
@@ -1275,10 +1559,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minipass@npm:^5.0.0 || ^6.0.2 || ^7.0.0, minipass@npm:^7.0.2, minipass@npm:^7.0.3, minipass@npm:^7.0.4":
-  version: 7.0.4
-  resolution: "minipass@npm:7.0.4"
-  checksum: 6c7370a6dfd257bf18222da581ba89a5eaedca10e158781232a8b5542a90547540b4b9b7e7f490e4cda43acfbd12e086f0453728ecf8c19e0ef6921bc5958ac5
+"minipass@npm:^5.0.0 || ^6.0.2 || ^7.0.0, minipass@npm:^7.0.2, minipass@npm:^7.0.3, minipass@npm:^7.1.2":
+  version: 7.1.2
+  resolution: "minipass@npm:7.1.2"
+  checksum: b0fd20bb9fb56e5fa9a8bfac539e8915ae07430a619e4b86ff71f5fc757ef3924b23b2c4230393af1eda647ed3d75739e4e0acb250a6b1eb277cf7f8fe449557
   languageName: node
   linkType: hard
 
@@ -1308,10 +1592,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"muggle-string@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "muggle-string@npm:0.3.1"
-  checksum: 489b0575fa76e30914393915a36638590052409fca2206a6bef0fb0ad7b181c1cbf99761191bfd16fe402c6f5a3164897965422fa32ef20ada1b44024ba46ab6
+"muggle-string@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "muggle-string@npm:0.4.1"
+  checksum: e914b63e24cd23f97e18376ec47e4ba3aa24365e4776212b666add2e47bb158003212980d732c49abf3719568900af7861873844a6e2d3a7ca7e86952c0e99e9
   languageName: node
   linkType: hard
 
@@ -1332,8 +1616,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 10.1.0
-  resolution: "node-gyp@npm:10.1.0"
+  version: 10.2.0
+  resolution: "node-gyp@npm:10.2.0"
   dependencies:
     env-paths: "npm:^2.2.0"
     exponential-backoff: "npm:^3.1.1"
@@ -1341,24 +1625,42 @@ __metadata:
     graceful-fs: "npm:^4.2.6"
     make-fetch-happen: "npm:^13.0.0"
     nopt: "npm:^7.0.0"
-    proc-log: "npm:^3.0.0"
+    proc-log: "npm:^4.1.0"
     semver: "npm:^7.3.5"
-    tar: "npm:^6.1.2"
+    tar: "npm:^6.2.1"
     which: "npm:^4.0.0"
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: 9cc821111ca244a01fb7f054db7523ab0a0cd837f665267eb962eb87695d71fb1e681f9e21464cc2fd7c05530dc4c81b810bca1a88f7d7186909b74477491a3c
+  checksum: 00630d67dbd09a45aee0a5d55c05e3916ca9e6d427ee4f7bc392d2d3dc5fad7449b21fc098dd38260a53d9dcc9c879b36704a1994235d4707e7271af7e9a835b
   languageName: node
   linkType: hard
 
 "nopt@npm:^7.0.0":
-  version: 7.2.0
-  resolution: "nopt@npm:7.2.0"
+  version: 7.2.1
+  resolution: "nopt@npm:7.2.1"
   dependencies:
     abbrev: "npm:^2.0.0"
   bin:
     nopt: bin/nopt.js
-  checksum: 9bd7198df6f16eb29ff16892c77bcf7f0cc41f9fb5c26280ac0def2cf8cf319f3b821b3af83eba0e74c85807cc430a16efe0db58fe6ae1f41e69519f585b6aff
+  checksum: a069c7c736767121242037a22a788863accfa932ab285a1eb569eb8cd534b09d17206f68c37f096ae785647435e0c5a5a0a67b42ec743e481a455e5ae6a6df81
+  languageName: node
+  linkType: hard
+
+"normalize-wheel-es@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "normalize-wheel-es@npm:1.2.0"
+  checksum: 48b5961f3f2fb902213ae8b4389fa043a134b3f15415e58f170aa414ba205896ba03410f457812baaaf50bd0a4a2899f35a390315163c1b2f24dddacffbdc89f
+  languageName: node
+  linkType: hard
+
+"open@npm:^8.4.0":
+  version: 8.4.2
+  resolution: "open@npm:8.4.2"
+  dependencies:
+    define-lazy-prop: "npm:^2.0.0"
+    is-docker: "npm:^2.1.1"
+    is-wsl: "npm:^2.2.0"
+  checksum: bb6b3a58401dacdb0aad14360626faf3fb7fba4b77816b373495988b724fb48941cad80c1b65d62bb31a17609b2cd91c41a181602caea597ca80dfbcc27e84c9
   languageName: node
   linkType: hard
 
@@ -1368,6 +1670,13 @@ __metadata:
   dependencies:
     aggregate-error: "npm:^3.0.0"
   checksum: 592c05bd6262c466ce269ff172bb8de7c6975afca9b50c975135b974e9bdaafbfe80e61aaaf5be6d1200ba08b30ead04b88cfa7e25ff1e3b93ab28c9f62a2c75
+  languageName: node
+  linkType: hard
+
+"package-json-from-dist@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "package-json-from-dist@npm:1.0.0"
+  checksum: e3ffaf6ac1040ab6082a658230c041ad14e72fabe99076a2081bb1d5d41210f11872403fc09082daf4387fc0baa6577f96c9c0e94c90c394fd57794b66aa4033
   languageName: node
   linkType: hard
 
@@ -1385,38 +1694,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-scurry@npm:^1.10.2":
-  version: 1.10.2
-  resolution: "path-scurry@npm:1.10.2"
+"path-scurry@npm:^1.11.1":
+  version: 1.11.1
+  resolution: "path-scurry@npm:1.11.1"
   dependencies:
     lru-cache: "npm:^10.2.0"
     minipass: "npm:^5.0.0 || ^6.0.2 || ^7.0.0"
-  checksum: d723777fbf9627f201e64656680f66ebd940957eebacf780e6cce1c2919c29c116678b2d7dbf8821b3a2caa758d125f4444005ccec886a25c8f324504e48e601
+  checksum: 32a13711a2a505616ae1cc1b5076801e453e7aae6ac40ab55b388bb91b9d0547a52f5aaceff710ea400205f18691120d4431e520afbe4266b836fadede15872d
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "picocolors@npm:1.0.0"
-  checksum: 20a5b249e331c14479d94ec6817a182fd7a5680debae82705747b2db7ec50009a5f6648d0621c561b0572703f84dbef0858abcbd5856d3c5511426afcb1961f7
+"picocolors@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "picocolors@npm:1.0.1"
+  checksum: c63cdad2bf812ef0d66c8db29583802355d4ca67b9285d846f390cc15c2f6ccb94e8cb7eb6a6e97fc5990a6d3ad4ae42d86c84d3146e667c739a4234ed50d400
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.33, postcss@npm:^8.4.35":
-  version: 8.4.35
-  resolution: "postcss@npm:8.4.35"
+"picomatch@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "picomatch@npm:2.3.1"
+  checksum: 26c02b8d06f03206fc2ab8d16f19960f2ff9e81a658f831ecb656d8f17d9edc799e8364b1f4a7873e89d9702dff96204be0fa26fe4181f6843f040f819dac4be
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.39, postcss@npm:^8.4.40":
+  version: 8.4.40
+  resolution: "postcss@npm:8.4.40"
   dependencies:
     nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.0.2"
-  checksum: e8dd04e48001eb5857abc9475365bf08f4e508ddf9bc0b8525449a95d190f10d025acebc5b56ac2e94b3c7146790e4ae78989bb9633cb7ee20d1cc9b7dc909b2
+    picocolors: "npm:^1.0.1"
+    source-map-js: "npm:^1.2.0"
+  checksum: 65ed67573e5443beaeb582282ff27a6be7c7fe3b4d9fa15761157616f2b97510cb1c335023c26220b005909f007337026d6e3ff092f25010b484ad484e80ea7f
   languageName: node
   linkType: hard
 
-"proc-log@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "proc-log@npm:3.0.0"
-  checksum: f66430e4ff947dbb996058f6fd22de2c66612ae1a89b097744e17fb18a4e8e7a86db99eda52ccf15e53f00b63f4ec0b0911581ff2aac0355b625c8eac509b0dc
+"proc-log@npm:^4.1.0, proc-log@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "proc-log@npm:4.2.0"
+  checksum: 17db4757c2a5c44c1e545170e6c70a26f7de58feb985091fb1763f5081cab3d01b181fb2dd240c9f4a4255a1d9227d163d5771b7e69c9e49a561692db865efb9
   languageName: node
   linkType: hard
 
@@ -1430,6 +1746,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"require-directory@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "require-directory@npm:2.1.1"
+  checksum: 83aa76a7bc1531f68d92c75a2ca2f54f1b01463cb566cf3fbc787d0de8be30c9dbc211d1d46be3497dac5785fe296f2dd11d531945ac29730643357978966e99
+  languageName: node
+  linkType: hard
+
 "retry@npm:^0.12.0":
   version: 0.12.0
   resolution: "retry@npm:0.12.0"
@@ -1437,23 +1760,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.2.0":
-  version: 4.12.0
-  resolution: "rollup@npm:4.12.0"
+"rollup-plugin-visualizer@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "rollup-plugin-visualizer@npm:5.12.0"
   dependencies:
-    "@rollup/rollup-android-arm-eabi": "npm:4.12.0"
-    "@rollup/rollup-android-arm64": "npm:4.12.0"
-    "@rollup/rollup-darwin-arm64": "npm:4.12.0"
-    "@rollup/rollup-darwin-x64": "npm:4.12.0"
-    "@rollup/rollup-linux-arm-gnueabihf": "npm:4.12.0"
-    "@rollup/rollup-linux-arm64-gnu": "npm:4.12.0"
-    "@rollup/rollup-linux-arm64-musl": "npm:4.12.0"
-    "@rollup/rollup-linux-riscv64-gnu": "npm:4.12.0"
-    "@rollup/rollup-linux-x64-gnu": "npm:4.12.0"
-    "@rollup/rollup-linux-x64-musl": "npm:4.12.0"
-    "@rollup/rollup-win32-arm64-msvc": "npm:4.12.0"
-    "@rollup/rollup-win32-ia32-msvc": "npm:4.12.0"
-    "@rollup/rollup-win32-x64-msvc": "npm:4.12.0"
+    open: "npm:^8.4.0"
+    picomatch: "npm:^2.3.1"
+    source-map: "npm:^0.7.4"
+    yargs: "npm:^17.5.1"
+  peerDependencies:
+    rollup: 2.x || 3.x || 4.x
+  peerDependenciesMeta:
+    rollup:
+      optional: true
+  bin:
+    rollup-plugin-visualizer: dist/bin/cli.js
+  checksum: 0e44a641223377ebb472bb10f2b22efa773b5f6fbe8d54f197f07c68d7a432cbf00abad79a0aa1570f70c673c792f24700d926d663ed9a4d0ad8406ae5a0f4e4
+  languageName: node
+  linkType: hard
+
+"rollup@npm:^4.13.0":
+  version: 4.19.2
+  resolution: "rollup@npm:4.19.2"
+  dependencies:
+    "@rollup/rollup-android-arm-eabi": "npm:4.19.2"
+    "@rollup/rollup-android-arm64": "npm:4.19.2"
+    "@rollup/rollup-darwin-arm64": "npm:4.19.2"
+    "@rollup/rollup-darwin-x64": "npm:4.19.2"
+    "@rollup/rollup-linux-arm-gnueabihf": "npm:4.19.2"
+    "@rollup/rollup-linux-arm-musleabihf": "npm:4.19.2"
+    "@rollup/rollup-linux-arm64-gnu": "npm:4.19.2"
+    "@rollup/rollup-linux-arm64-musl": "npm:4.19.2"
+    "@rollup/rollup-linux-powerpc64le-gnu": "npm:4.19.2"
+    "@rollup/rollup-linux-riscv64-gnu": "npm:4.19.2"
+    "@rollup/rollup-linux-s390x-gnu": "npm:4.19.2"
+    "@rollup/rollup-linux-x64-gnu": "npm:4.19.2"
+    "@rollup/rollup-linux-x64-musl": "npm:4.19.2"
+    "@rollup/rollup-win32-arm64-msvc": "npm:4.19.2"
+    "@rollup/rollup-win32-ia32-msvc": "npm:4.19.2"
+    "@rollup/rollup-win32-x64-msvc": "npm:4.19.2"
     "@types/estree": "npm:1.0.5"
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
@@ -1467,11 +1812,17 @@ __metadata:
       optional: true
     "@rollup/rollup-linux-arm-gnueabihf":
       optional: true
+    "@rollup/rollup-linux-arm-musleabihf":
+      optional: true
     "@rollup/rollup-linux-arm64-gnu":
       optional: true
     "@rollup/rollup-linux-arm64-musl":
       optional: true
+    "@rollup/rollup-linux-powerpc64le-gnu":
+      optional: true
     "@rollup/rollup-linux-riscv64-gnu":
+      optional: true
+    "@rollup/rollup-linux-s390x-gnu":
       optional: true
     "@rollup/rollup-linux-x64-gnu":
       optional: true
@@ -1487,7 +1838,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 1650168231ae8e2bd6fb4d82cc232e53b5c0fe67895188fa683370c9bd3f1febaa28e45c6b100cea333e54f8f5fae6f4d0eea7d86256ec2cc3e38212c55796d6
+  checksum: ff5c1d071c873f25016263568177f5406d76f242a04d25a191a37f4b859a1662a1acc9f76bf680968ffcebb467ac4952521462375698468c80506ff91a0b9f2d
   languageName: node
   linkType: hard
 
@@ -1499,13 +1850,11 @@ __metadata:
   linkType: hard
 
 "semver@npm:^7.3.5, semver@npm:^7.5.4":
-  version: 7.6.0
-  resolution: "semver@npm:7.6.0"
-  dependencies:
-    lru-cache: "npm:^6.0.0"
+  version: 7.6.3
+  resolution: "semver@npm:7.6.3"
   bin:
     semver: bin/semver.js
-  checksum: fbfe717094ace0aa8d6332d7ef5ce727259815bd8d8815700853f4faf23aacbd7192522f0dc5af6df52ef4fa85a355ebd2f5d39f554bd028200d6cf481ab9b53
+  checksum: 88f33e148b210c153873cb08cfe1e281d518aaa9a666d4d148add6560db5cd3c582f3a08ccb91f38d5f379ead256da9931234ed122057f40bb5766e65e58adaf
   languageName: node
   linkType: hard
 
@@ -1540,30 +1889,37 @@ __metadata:
   linkType: hard
 
 "socks-proxy-agent@npm:^8.0.3":
-  version: 8.0.3
-  resolution: "socks-proxy-agent@npm:8.0.3"
+  version: 8.0.4
+  resolution: "socks-proxy-agent@npm:8.0.4"
   dependencies:
     agent-base: "npm:^7.1.1"
     debug: "npm:^4.3.4"
-    socks: "npm:^2.7.1"
-  checksum: 4950529affd8ccd6951575e21c1b7be8531b24d924aa4df3ee32df506af34b618c4e50d261f4cc603f1bfd8d426915b7d629966c8ce45b05fb5ad8c8b9a6459d
+    socks: "npm:^2.8.3"
+  checksum: 345593bb21b95b0508e63e703c84da11549f0a2657d6b4e3ee3612c312cb3a907eac10e53b23ede3557c6601d63252103494caa306b66560f43af7b98f53957a
   languageName: node
   linkType: hard
 
-"socks@npm:^2.7.1":
-  version: 2.8.1
-  resolution: "socks@npm:2.8.1"
+"socks@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "socks@npm:2.8.3"
   dependencies:
     ip-address: "npm:^9.0.5"
     smart-buffer: "npm:^4.2.0"
-  checksum: ac77b515c260473cc7c4452f09b20939e22510ce3ae48385c516d1d5784374d5cc75be3cb18ff66cc985a7f4f2ef8fef84e984c5ec70aad58355ed59241f40a8
+  checksum: d54a52bf9325165770b674a67241143a3d8b4e4c8884560c4e0e078aace2a728dffc7f70150660f51b85797c4e1a3b82f9b7aa25e0a0ceae1a243365da5c51a7
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "source-map-js@npm:1.0.2"
-  checksum: 32f2dfd1e9b7168f9a9715eb1b4e21905850f3b50cf02cf476e47e4eebe8e6b762b63a64357896aa29b37e24922b4282df0f492e0d2ace572b43d15525976ff8
+"source-map-js@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "source-map-js@npm:1.2.0"
+  checksum: 7e5f896ac10a3a50fe2898e5009c58ff0dc102dcb056ed27a354623a0ece8954d4b2649e1a1b2b52ef2e161d26f8859c7710350930751640e71e374fe2d321a4
+  languageName: node
+  linkType: hard
+
+"source-map@npm:^0.7.4":
+  version: 0.7.4
+  resolution: "source-map@npm:0.7.4"
+  checksum: dc0cf3768fe23c345ea8760487f8c97ef6fca8a73c83cd7c9bf2fde8bc2c34adb9c0824d6feb14bc4f9e37fb522e18af621543f1289038a66ac7586da29aa7dc
   languageName: node
   linkType: hard
 
@@ -1575,15 +1931,15 @@ __metadata:
   linkType: hard
 
 "ssri@npm:^10.0.0":
-  version: 10.0.5
-  resolution: "ssri@npm:10.0.5"
+  version: 10.0.6
+  resolution: "ssri@npm:10.0.6"
   dependencies:
     minipass: "npm:^7.0.3"
-  checksum: b091f2ae92474183c7ac5ed3f9811457e1df23df7a7e70c9476eaa9a0c4a0c8fc190fb45acefbf023ca9ee864dd6754237a697dc52a0fb182afe65d8e77443d8
+  checksum: e5a1e23a4057a86a97971465418f22ea89bd439ac36ade88812dd920e4e61873e8abd6a9b72a03a67ef50faa00a2daf1ab745c5a15b46d03e0544a0296354227
   languageName: node
   linkType: hard
 
-"string-width-cjs@npm:string-width@^4.2.0, string-width@npm:^4.1.0":
+"string-width-cjs@npm:string-width@^4.2.0, string-width@npm:^4.1.0, string-width@npm:^4.2.0, string-width@npm:^4.2.3":
   version: 4.2.3
   resolution: "string-width@npm:4.2.3"
   dependencies:
@@ -1623,7 +1979,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar@npm:^6.1.11, tar@npm:^6.1.2":
+"tar@npm:^6.1.11, tar@npm:^6.2.1":
   version: 6.2.1
   resolution: "tar@npm:6.2.1"
   dependencies:
@@ -1644,23 +2000,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.0.2":
-  version: 5.3.3
-  resolution: "typescript@npm:5.3.3"
+"typescript@npm:^5.2.2":
+  version: 5.5.4
+  resolution: "typescript@npm:5.5.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e33cef99d82573624fc0f854a2980322714986bc35b9cb4d1ce736ed182aeab78e2cb32b385efa493b2a976ef52c53e20d6c6918312353a91850e2b76f1ea44f
+  checksum: 422be60f89e661eab29ac488c974b6cc0a660fb2228003b297c3d10c32c90f3bcffc1009b43876a082515a3c376b1eefcce823d6e78982e6878408b9a923199c
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.0.2#optional!builtin<compat/typescript>":
-  version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=29ae49"
+"typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>":
+  version: 5.5.4
+  resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=29ae49"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e22df47df9b2b2f2617b8bf511a29aea3d177f9f7a0756818230a76b01cbd7da988bf55f9463aaa1a4c1ff90b80f8dc5676460d4e9dfc010572cbba59b822b0c
+  checksum: 10dd9881baba22763de859e8050d6cb6e2db854197495c6f1929b08d1eb2b2b00d0b5d9b0bcee8472f1c3f4a7ef6a5d7ebe0cfd703f853aa5ae465b8404bc1ba
   languageName: node
   linkType: hard
 
@@ -1689,14 +2045,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0":
-  version: 5.1.3
-  resolution: "vite@npm:5.1.3"
+"vite@npm:^5.3.1":
+  version: 5.3.5
+  resolution: "vite@npm:5.3.5"
   dependencies:
-    esbuild: "npm:^0.19.3"
+    esbuild: "npm:^0.21.3"
     fsevents: "npm:~2.3.3"
-    postcss: "npm:^8.4.35"
-    rollup: "npm:^4.2.0"
+    postcss: "npm:^8.4.39"
+    rollup: "npm:^4.13.0"
   peerDependencies:
     "@types/node": ^18.0.0 || >=20.0.0
     less: "*"
@@ -1725,50 +2081,63 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: d3b19607d736de60b660f7daf4c0f86589edcbbc1fcb09f8aa36630f99518cc8a063062bb952899b8ccaed62f1314fac22c1df492dd035de3c65998ab27e2d2a
+  checksum: 795c7e0dbc94b96c4a0aff0d5d4b349dd28ad8b7b70979c1010f96b4d83f7d6c1700ebd6fed91de2e021b0a3689b9abc2d8017f6dfa8c9a6ca5c7af637d6afc6
   languageName: node
   linkType: hard
 
-"vue-template-compiler@npm:^2.7.14":
-  version: 2.7.16
-  resolution: "vue-template-compiler@npm:2.7.16"
-  dependencies:
-    de-indent: "npm:^1.0.2"
-    he: "npm:^1.2.0"
-  checksum: 66667ffd5095b707f169c902c4f1a011e9d5ab99fc228e4dac14eb5ca7f107ed99bff261b21578a4b391d2f3d320a8050e754404443472acad13ddaa4bd7bae2
+"vscode-uri@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "vscode-uri@npm:3.0.8"
+  checksum: f7f217f526bf109589969fe6e66b71e70b937de1385a1d7bb577ca3ee7c5e820d3856a86e9ff2fa9b7a0bc56a3dd8c3a9a557d3fedd7df414bc618d5e6b567f9
   languageName: node
   linkType: hard
 
-"vue-tsc@npm:^1.8.5":
-  version: 1.8.27
-  resolution: "vue-tsc@npm:1.8.27"
+"vue-demi@npm:*":
+  version: 0.14.10
+  resolution: "vue-demi@npm:0.14.10"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: a9ed8712fa36d01bc13c39757f95f30cebf42d557b99e94bff86d8660c81f2911b41220f7affc023d1ffcc19e13999e4a83019991e264787cca2c616e83aea48
+  languageName: node
+  linkType: hard
+
+"vue-tsc@npm:^2.0.22":
+  version: 2.0.29
+  resolution: "vue-tsc@npm:2.0.29"
   dependencies:
-    "@volar/typescript": "npm:~1.11.1"
-    "@vue/language-core": "npm:1.8.27"
+    "@volar/typescript": "npm:~2.4.0-alpha.18"
+    "@vue/language-core": "npm:2.0.29"
     semver: "npm:^7.5.4"
   peerDependencies:
-    typescript: "*"
+    typescript: ">=5.0.0"
   bin:
-    vue-tsc: bin/vue-tsc.js
-  checksum: 6e6ba37eb7a0c8b9cc613225729c74edf8bd0632d265e62aca28b1969b5615b9dbe2de03aefb8aed2e26fdbd4b93f134785c8ab0095f92c2469192e2db5d09fd
+    vue-tsc: ./bin/vue-tsc.js
+  checksum: effec887df535bde1a8244a8a247dd924aa3546437a54a70ac436acb6a164f8737257f8ce8336c160ea32a0d8908925e5dc26e585d2e4414490baf66190db9ba
   languageName: node
   linkType: hard
 
-"vue@npm:^3.3.4":
-  version: 3.4.19
-  resolution: "vue@npm:3.4.19"
+"vue@npm:^3.4.35":
+  version: 3.4.35
+  resolution: "vue@npm:3.4.35"
   dependencies:
-    "@vue/compiler-dom": "npm:3.4.19"
-    "@vue/compiler-sfc": "npm:3.4.19"
-    "@vue/runtime-dom": "npm:3.4.19"
-    "@vue/server-renderer": "npm:3.4.19"
-    "@vue/shared": "npm:3.4.19"
+    "@vue/compiler-dom": "npm:3.4.35"
+    "@vue/compiler-sfc": "npm:3.4.35"
+    "@vue/runtime-dom": "npm:3.4.35"
+    "@vue/server-renderer": "npm:3.4.35"
+    "@vue/shared": "npm:3.4.35"
   peerDependencies:
     typescript: "*"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 90d45a30b096d3a2445314cf5a94db6f56b854bd483a706bc7ec358b555e2c6dba8ce7b6a976d52af2a8ba92fb3caab4b77b50886f732857320073753152528d
+  checksum: 072e5550cc15404ce463bde0455e9a5bafa8dd4e2dba1c784ea6a8a531e2eb3fac549bc8f1cb028f861646c96b4fc17071b624f9036199a581c283ada0d648b1
   languageName: node
   linkType: hard
 
@@ -1794,7 +2163,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0, wrap-ansi@npm:^7.0.0":
   version: 7.0.0
   resolution: "wrap-ansi@npm:7.0.0"
   dependencies:
@@ -1816,9 +2185,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"y18n@npm:^5.0.5":
+  version: 5.0.8
+  resolution: "y18n@npm:5.0.8"
+  checksum: 4df2842c36e468590c3691c894bc9cdbac41f520566e76e24f59401ba7d8b4811eb1e34524d57e54bc6d864bcb66baab7ffd9ca42bf1eda596618f9162b91249
+  languageName: node
+  linkType: hard
+
 "yallist@npm:^4.0.0":
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: 2286b5e8dbfe22204ab66e2ef5cc9bbb1e55dfc873bbe0d568aa943eb255d131890dfd5bf243637273d31119b870f49c18fcde2c6ffbb7a7a092b870dc90625a
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:^21.1.1":
+  version: 21.1.1
+  resolution: "yargs-parser@npm:21.1.1"
+  checksum: f84b5e48169479d2f402239c59f084cfd1c3acc197a05c59b98bab067452e6b3ea46d4dd8ba2985ba7b3d32a343d77df0debd6b343e5dae3da2aab2cdf5886b2
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^17.5.1":
+  version: 17.7.2
+  resolution: "yargs@npm:17.7.2"
+  dependencies:
+    cliui: "npm:^8.0.1"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    require-directory: "npm:^2.1.1"
+    string-width: "npm:^4.2.3"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^21.1.1"
+  checksum: ccd7e723e61ad5965fffbb791366db689572b80cca80e0f96aad968dfff4156cd7cd1ad18607afe1046d8241e6fb2d6c08bf7fa7bfb5eaec818735d8feac8f05
   languageName: node
   linkType: hard

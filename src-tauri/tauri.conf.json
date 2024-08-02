@@ -3,103 +3,49 @@
   "build": {
     "beforeBuildCommand": "yarn build",
     "beforeDevCommand": "yarn dev",
-    "devPath": "http://127.0.0.1:1420",
-    "distDir": "../dist"
+    "frontendDist": "../dist",
+    "devUrl": "http://127.0.0.1:1420"
   },
-  "package": {
-    "productName": "checkList",
-    "version": "0.0.5"
-  },
-  "tauri": {
-    "systemTray": {
-      "iconPath": "icons/32x32.png",
-      "menuOnLeftClick": true,
-      "title": "Md5 Checker",
-      "iconAsTemplate": true
-    },
-    "allowlist": {
-      "globalShortcut": {
-        "all": true
-      },
-      "shell": {
-        "open": true
-      },
-      "all": true,
-      "fs": {
-        "all": true,
-        "readFile": true,
-        "writeFile": true,
-        "readDir": true,
-        "copyFile": true,
-        "createDir": true,
-        "removeDir": true,
-        "removeFile": true,
-        "renameFile": true,
-        "exists": true
-      },
-      "dialog": {
-        "all": true
-      }
-    },
-    "bundle": {
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "identifier": "com.initialencounter.checkList",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
-      "windows": {
-        "wix": {
-          "language": [
-            "zh-CN",
-            "en-US"
-          ]
-        },
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "security": {
-      "csp": null,
-      "dangerousDisableAssetCspModification": true
-    },
-    "updater": {
-      "active": false
-    },
+  "app": {
     "macOSPrivateApi": true,
     "windows": [
       {
         "fullscreen": false,
-        "width": 1700,
-        "height": 50,
+        "width": 80,
+        "height": 150,
         "title": "checkList",
-        "fileDropEnabled": false,
-        "transparent": true,
-        "resizable": false,
+        "transparent": false,
         "decorations": false,
         "alwaysOnTop": true
       }
-    ]
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "category": "Productivity",
+    "externalBin": [],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "longDescription": "checkList written by tauri",
+    "targets": "all",
+    "windows": {
+      "wix": {
+        "language": [
+          "zh-CN",
+          "en-US"
+        ]
+      },
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    }
   }
 }

@@ -1,12 +1,15 @@
-// Prevents additional console window on Windows in release, DO NOT REMOVE!!
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 use serde::{Deserialize, Serialize};
-use tauri::{api::dialog, CustomMenuItem, LogicalPosition, Manager, Position, SystemTray, SystemTrayEvent, SystemTrayMenu};
+#[cfg_attr(mobile, tauri::mobile_entry_point)]
+use tauri::{Emitter, LogicalPosition, Manager, Position};
+use tauri::menu::{MenuBuilder, MenuItemBuilder};
+use tauri::tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent};
+use tauri_plugin_dialog::{DialogExt, MessageDialogKind};
+
 mod utils;
-use utils::{check_update, open_link, restart, set_window_topmost, get_config};
+use utils::{check_update, open_link, restart, get_config, hide_or_show, log_info};
 
 #[derive(Serialize, Deserialize, Debug)]
-struct  CheckItme {
+struct CheckItem {
     name: String,
     state: bool
 }
@@ -19,123 +22,82 @@ struct  PositionConfig {
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Config {
-    check_list: Vec<CheckItme>,
+    check_list: Vec<CheckItem>,
     position: PositionConfig,
 }
 
-
+#[derive(Serialize, Clone)]
+struct Link {
+    link: String,
+}
 
 fn main() {
-    let quit = CustomMenuItem::new("quit".to_string(), "退出(X)");
-    let hide = CustomMenuItem::new("hide".to_string(), "隐藏(H)");
-    let about = CustomMenuItem::new("about".to_string(), "关于(A)");
-    let update = CustomMenuItem::new("update".to_string(), "检查更新(U)");
-    let restart_ = CustomMenuItem::new("restart".to_string(), "重启(R)");
-    let tray_menu = SystemTrayMenu::new()
-        .add_item(update)
-        .add_item(restart_)
-        .add_item(about)
-        .add_item(hide)
-        .add_item(quit); // insert the menu items here
     tauri::Builder::default()
-        .system_tray(SystemTray::new().with_menu(tray_menu))
-        .on_system_tray_event(|app, event| match event {
-            SystemTrayEvent::LeftClick {
-                position: _,
-                size: _,
-                ..
-            } => {
-                let window = match app.get_window("main") {
-                    Some(a) => a,
-                    None => panic!("Unkonw"),
-                };
-                if window.is_visible().expect("REASON") {
-                    match window.hide() {
-                        Ok(a) => a,
-                        Err(e) => println!("{}", e.to_string()),
-                    };
-                } else {
-                    match window.show() {
-                        Ok(a) => a,
-                        Err(e) => println!("{}", e.to_string()),
-                    };
-                }
-            }
-            SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
-                "quit" => {
-                    std::process::exit(0);
-                }
-                "hide" => {
-                    let window = match app.get_window("main") {
-                        Some(a) => a,
-                        None => panic!("Unkonw"),
-                    };
-                    match window.hide() {
-                        Ok(a) => a,
-                        Err(e) => println!("{}", e.to_string()),
-                    };
-                }
-                "about" => open_link("https://github.com/initialencounter/checkList"),
-                "update" => {
-                    let window = match app.get_window("main") {
-                        Some(a) => a,
-                        None => panic!("Unkonw"),
-                    };
-                    let current_version = format!("v{}", env!("CARGO_PKG_VERSION"));
-                    let lastest = check_update(String::from("000"));
-                    if lastest == "000" {
-                        dialog::ask(Some(&window), "checkList", "检查更新失败!", |answer| {
-                            match answer {
-                                true => (),
-                                false => (),
-                            }
-                        })
-                    } else if lastest != current_version {
-                        dialog::ask(
-                            Some(&window),
-                            "checkList",
-                            format!("发现新版本{}，是否前往", lastest).as_str(),
-                            |answer| match answer {
-                                true => open_link(
-                                    "https://github.com/initialencounter/checkList/releases/latest",
-                                ),
-                                false => (),
-                            },
-                        );
-                    } else {
-                        dialog::ask(
-                            Some(&window),
-                            "checkList",
-                            format!("当前版本是最新版").as_str(),
-                            |answer| match answer {
-                                true => (),
-                                false => (),
-                            },
-                        )
+        .plugin(tauri_plugin_global_shortcut::Builder::new().build())
+        .plugin(tauri_plugin_dialog::init())
+        .setup(|app| {
+            let help_ = MenuItemBuilder::new("帮助(H)").id("help").build(app).unwrap();
+            let quit = MenuItemBuilder::new("退出(X)").id("quit").build(app).unwrap();
+            let hide = MenuItemBuilder::new("隐藏(H)").id("hide").build(app).unwrap();
+            let about = MenuItemBuilder::new("关于(A)").id("about").build(app).unwrap();
+            let update = MenuItemBuilder::new("检查更新(U)").id("update").build(app).unwrap();
+            let restart_ = MenuItemBuilder::new("重启(R)").id("restart").build(app).unwrap();
+            let tray_menu = MenuBuilder::new(app)
+                .items(&[&help_, &update, &restart_, &about, &hide, &quit]) // insert the menu items here
+                .build()
+                .unwrap();
+            let _ = TrayIconBuilder::new()
+                .icon(app.default_window_icon().unwrap().clone())
+                .menu(&tray_menu)
+                .on_menu_event(|app, event| match event.id().as_ref() {
+                    "help" => app.emit("open_link", Some(Link{link: "https://github.com/initialencounter/checkList?tab=readme-ov-file#使用帮助".to_string() })).unwrap(),
+                    "quit" => app.exit(0),
+                    "hide" => {
+                        let window = app.get_webview_window("main").unwrap();
+                        hide_or_show(window);
                     }
-                }
-                "restart" => restart(),
-                _ => {}
-            },
-            _ => {}
-        })
-        .on_window_event(|event| match event.event() {
-            tauri::WindowEvent::CloseRequested { api, .. } => {
-                let _ = event.window().hide();
-                api.prevent_close();
-            }
-            _ => {}
+                    "restart" => restart(),
+                    "about" => app.emit("open_link", Some(Link{link: "https://github.com/initialencounter/checkList".to_string() })).unwrap(),
+                    "update" => {
+                        let current_version = format!("v{}", env!("CARGO_PKG_VERSION"));
+                        let latest = check_update(String::from("000"));
+                        if latest == "000" {
+                            app.dialog().message("检查更新失败!").kind(MessageDialogKind::Error).show(|_| {});
+                        } else if latest != current_version {
+                            app.dialog().message(format!("发现新版本{}，是否前往", latest)).kind(MessageDialogKind::Info).show(|_| {});
+                            app.emit("open_link", Some(Link{link: "https://github.com/initialencounter/checkList/releases/latest".to_string() })).unwrap();
+                        } else {
+                            app.dialog().message("当前版本是最新版").kind(MessageDialogKind::Info).show(|_| {});
+                        }
+                    }
+                    _ => {}
+                })
+                .on_tray_icon_event(|tray, event| {
+                    if let TrayIconEvent::Click {
+                        button: MouseButton::Left,
+                        button_state: MouseButtonState::Up,
+                        ..
+                    } = event
+                    {
+                        let app = tray.app_handle();
+                        if let Some(window) = app.get_webview_window("main") {
+                            hide_or_show(window);
+                        }
+                    }
+                })
+                .build(app).unwrap();
+            app.get_webview_window("main").unwrap().set_always_on_top(true).expect("Failed to set window as topmost");
+            Ok(())
         })
         .on_page_load(|window, _| {
             let data = get_config();
             let config: Config = serde_json::from_str(data.as_str()).unwrap();
             let _ = window.set_position(Position::Logical(LogicalPosition {
-                x: config.position.x as f64,
-                y: config.position.y as f64
+                x: config.position.x,
+                y: config.position.y
             }));
-            set_window_topmost(window.clone());
         })
-        .invoke_handler(tauri::generate_handler![open_link, restart, get_config])
+        .invoke_handler(tauri::generate_handler![open_link, restart, get_config, log_info])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

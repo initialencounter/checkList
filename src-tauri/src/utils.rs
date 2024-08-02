@@ -1,6 +1,6 @@
 use reqwest;
 use serde::Deserialize;
-use tauri::{self, Window};
+use tauri::{self, WebviewWindow};
 use webbrowser;
 use std::fs::File;
 use std::io::{self, Read, Write};
@@ -21,7 +21,12 @@ pub fn open_link(url: &str) {
 
 #[tauri::command]
 pub fn restart() {
-    tauri::api::process::restart(&tauri::Env::default())
+    tauri::process::restart(&tauri::Env::default())
+}
+
+#[tauri::command]
+pub fn log_info(info: String) {
+    println!("{}", info);
 }
 
 #[tauri::command]
@@ -38,7 +43,7 @@ pub fn get_config() -> String {
     let file_path = "checkList.json";
     match read_file_to_string(file_path) {
         Ok(contents) => {
-            println!("{}",contents);
+            // println!("{}",contents);
             contents
         }
         Err(_e) => {
@@ -183,8 +188,13 @@ pub fn check_update(flag: String) -> String {
     release.tag_name
 }
 
-pub fn set_window_topmost(window: Window) {
-    window
-        .set_always_on_top(true)
-        .expect("Failed to set window as topmost");
+pub fn hide_or_show(window: WebviewWindow) {
+    if window.is_visible().unwrap() {
+        window.hide().unwrap();
+    } else {
+        window
+            .set_always_on_top(true)
+            .expect("Failed to set window as topmost");
+        window.show().unwrap();
+    }
 }
