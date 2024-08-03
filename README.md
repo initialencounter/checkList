@@ -8,6 +8,9 @@ Custom desktop checklists
 Do whatever you want with it!
 
 # ChangLog
+- v0.0.7
+    - 修复前台控制台
+    - 将快捷键改为 `ctrl` + `shift` + `space`
 - v0.0.6
     - 迁移到 v2-rc
     - 拖动窗口
