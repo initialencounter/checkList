@@ -1,7 +1,6 @@
 use reqwest;
 use serde::Deserialize;
 use tauri::{self, WebviewWindow};
-use webbrowser;
 use std::fs::File;
 use std::io::{self, Read, Write};
 use std::path::Path;
@@ -10,13 +9,6 @@ use std::env;
 #[derive(Deserialize)]
 struct Release {
     tag_name: String,
-}
-
-#[tauri::command]
-pub fn open_link(url: &str) {
-    if let Err(e) = webbrowser::open(&url) {
-        eprintln!("Failed to open link: {}", e);
-    }
 }
 
 #[tauri::command]
@@ -134,11 +126,7 @@ r#"{
             "name": "报告编号",
             "state": false
         }
-    ],
-    "position": {
-        "x": -10,
-        "y": 925
-    }
+    ]
 }"#);
             write_to_file(file_path, &config);
             config

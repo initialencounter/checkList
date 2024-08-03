@@ -1,12 +1,12 @@
 use serde::{Deserialize, Serialize};
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
-use tauri::{Emitter, LogicalPosition, Manager, Position};
+use tauri::{Emitter, Manager};
 use tauri::menu::{MenuBuilder, MenuItemBuilder};
 use tauri::tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent};
 use tauri_plugin_dialog::{DialogExt, MessageDialogKind};
 
 mod utils;
-use utils::{check_update, open_link, restart, get_config, hide_or_show, log_info};
+use utils::{check_update, restart, get_config, hide_or_show, log_info};
 
 #[derive(Serialize, Deserialize, Debug)]
 struct CheckItem {
@@ -89,15 +89,7 @@ fn main() {
             app.get_webview_window("main").unwrap().set_always_on_top(true).expect("Failed to set window as topmost");
             Ok(())
         })
-        .on_page_load(|window, _| {
-            let data = get_config();
-            let config: Config = serde_json::from_str(data.as_str()).unwrap();
-            let _ = window.set_position(Position::Logical(LogicalPosition {
-                x: config.position.x,
-                y: config.position.y
-            }));
-        })
-        .invoke_handler(tauri::generate_handler![open_link, restart, get_config, log_info])
+        .invoke_handler(tauri::generate_handler![restart, get_config, log_info])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

@@ -1,3 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    /* For modern browsers */
+    -webkit-user-select: none;
+    /* For Safari */
+    -moz-user-select: none;
+    /* For Firefox */
+    -ms-user-select: none;
+    /* For IE10+ */
+    text-align: center;
+}
+
 .grid-item {
     position: relative;
     color: #fff;
@@ -14,24 +28,20 @@
 
 .grid-container {
     position: absolute;
-    left: 0;
+    left: 10px;
     display: grid;
-    grid-template-columns: auto;
-    width: 80px;
-    height: 200px;
-    grid-gap: 5px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, 70px);
+    width: 100%;
 }
 
 .action-btn {
     position: absolute;
     bottom: 0px;
-    left: 0;
+    right: 2%;
     background: green;
     position: relative;
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 2px;
     font-size: 12px;
     height: 30px;
     text-align: center;

@@ -6,15 +6,17 @@
     "frontendDist": "../dist",
     "devUrl": "http://127.0.0.1:1420"
   },
+  "productName": "checkList",
+  "version": "0.0.6",
   "app": {
     "macOSPrivateApi": true,
     "windows": [
       {
         "fullscreen": false,
-        "width": 80,
-        "height": 150,
+        "width": 1980,
+        "height": 48,
         "title": "checkList",
-        "transparent": false,
+        "transparent": true,
         "decorations": false,
         "alwaysOnTop": true
       }
@@ -24,6 +26,7 @@
     }
   },
   "bundle": {
+    "publisher": "initialencounter",
     "active": true,
     "category": "Productivity",
     "externalBin": [],
@@ -34,7 +37,7 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "longDescription": "checkList written by tauri",
+    "longDescription": "Custom desktop checklists",
     "targets": "all",
     "windows": {
       "wix": {

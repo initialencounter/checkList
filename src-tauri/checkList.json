@@ -96,9 +96,5 @@
             "name": "过度充电",
             "state": false
         }
-    ],
-    "position": {
-        "x": 50,
-        "y": 50
-    }
+    ]
 }
