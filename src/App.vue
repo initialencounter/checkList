@@ -41,7 +41,7 @@ async function handleHide() {
 }
 
 if (isTauri()) {
-  register("CommandOrControl+Shift+C", (event: ShortcutEvent) => {
+  register("CommandOrControl+Shift+Space", (event: ShortcutEvent) => {
     if (event.state === "Pressed") return;
     if (!check_list.value[target]) {
       target = 0;

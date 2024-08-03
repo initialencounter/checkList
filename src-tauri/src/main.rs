@@ -1,3 +1,6 @@
+// Prevents additional console window on Windows in release, DO NOT REMOVE!!
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 use serde::{Deserialize, Serialize};
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 use tauri::{Emitter, Manager};
@@ -11,13 +14,13 @@ use utils::{check_update, restart, get_config, hide_or_show, log_info};
 #[derive(Serialize, Deserialize, Debug)]
 struct CheckItem {
     name: String,
-    state: bool
+    state: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct  PositionConfig {
+struct PositionConfig {
     x: f64,
-    y: f64
+    y: f64,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -50,14 +53,14 @@ fn main() {
                 .icon(app.default_window_icon().unwrap().clone())
                 .menu(&tray_menu)
                 .on_menu_event(|app, event| match event.id().as_ref() {
-                    "help" => app.emit("open_link", Some(Link{link: "https://github.com/initialencounter/checkList?tab=readme-ov-file#使用帮助".to_string() })).unwrap(),
+                    "help" => app.emit("open_link", Some(Link { link: "https://github.com/initialencounter/checkList?tab=readme-ov-file#使用帮助".to_string() })).unwrap(),
                     "quit" => app.exit(0),
                     "hide" => {
                         let window = app.get_webview_window("main").unwrap();
                         hide_or_show(window);
                     }
                     "restart" => restart(),
-                    "about" => app.emit("open_link", Some(Link{link: "https://github.com/initialencounter/checkList".to_string() })).unwrap(),
+                    "about" => app.emit("open_link", Some(Link { link: "https://github.com/initialencounter/checkList".to_string() })).unwrap(),
                     "update" => {
                         let current_version = format!("v{}", env!("CARGO_PKG_VERSION"));
                         let latest = check_update(String::from("000"));
@@ -65,7 +68,7 @@ fn main() {
                             app.dialog().message("检查更新失败!").kind(MessageDialogKind::Error).show(|_| {});
                         } else if latest != current_version {
                             app.dialog().message(format!("发现新版本{}，是否前往", latest)).kind(MessageDialogKind::Info).show(|_| {});
-                            app.emit("open_link", Some(Link{link: "https://github.com/initialencounter/checkList/releases/latest".to_string() })).unwrap();
+                            app.emit("open_link", Some(Link { link: "https://github.com/initialencounter/checkList/releases/latest".to_string() })).unwrap();
                         } else {
                             app.dialog().message("当前版本是最新版").kind(MessageDialogKind::Info).show(|_| {});
                         }
