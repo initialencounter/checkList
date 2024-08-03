@@ -19,7 +19,7 @@ type file = {
 interface Link {
     link: string;
 }
-
+const hoverLock = ref<boolean>(true);
 const check_list = ref<file>([]);
 if (isTauri()) {
   appWindow = getCurrentWebviewWindow();
@@ -33,6 +33,11 @@ if (isTauri()) {
 }
 
 function switchState(name: number) {
+  target = Number(name);
+  check_list.value[name].state = check_list.value[name].state ? false : true;
+}
+function switchStateHover(name: number) {
+  if(hoverLock.value) return;
   target = Number(name);
   check_list.value[name].state = check_list.value[name].state ? false : true;
 }
@@ -77,6 +82,9 @@ function handleClearList() {
         borderRadius: index == 0? '10px 0 0 10px' : '0'
       }"
       @click="switchState(index)"
+      @mouseover="switchStateHover(index)"
+      @mousedown="hoverLock = false"
+      @mouseup="hoverLock = true"
     >
       {{ item.name }}
     </button>
