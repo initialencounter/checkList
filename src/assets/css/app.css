@@ -28,6 +28,7 @@
 
 .grid-container {
     position: absolute;
+    top: 0;
     left: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 70px);

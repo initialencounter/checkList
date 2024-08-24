@@ -67,6 +67,6 @@ pub fn handle_setup(app: &App<Wry>){
     let config = get_config_struct();
     let pos = PhysicalPosition::new(config.position.x, config.position.y);
     window.set_position(pos).unwrap();
-    // window.set_shadow(false).unwrap();
+    window.set_shadow(false).unwrap();
     window.set_always_on_top(true).expect("Failed to set window as topmost");
 }
