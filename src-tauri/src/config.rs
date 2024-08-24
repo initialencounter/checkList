@@ -1,8 +1,8 @@
-use std::{env, io};
+use serde::{Deserialize, Serialize};
 use std::fs::File;
 use std::io::{Read, Write};
 use std::path::Path;
-use serde::{Deserialize, Serialize};
+use std::{env, io};
 
 #[derive(Serialize, Deserialize, Debug)]
 struct CheckItem {
@@ -21,7 +21,7 @@ pub(crate) struct Config {
     pub(crate) position: PositionConfig,
 }
 
-pub fn get_config_struct() -> Config{
+pub fn get_config_struct() -> Config {
     let config_data = get_config();
     serde_json::from_str(config_data.as_str()).unwrap()
 }
@@ -136,13 +136,12 @@ pub fn get_config() -> String {
         "x": 50,
         "y": 900
     }
-}"#);
+}"#,
+            );
             write_to_file(file_path, &config);
             config
-
         }
     }
-
 }
 
 fn write_to_file(filename: &str, content: &str) {
@@ -150,7 +149,6 @@ fn write_to_file(filename: &str, content: &str) {
     let mut file = File::create(filename).unwrap();
     // 写入内容到文件
     file.write_all(content.as_bytes()).unwrap();
-
 }
 
 fn read_file_to_string<P: AsRef<Path>>(path: P) -> io::Result<String> {
