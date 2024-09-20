@@ -133,8 +133,8 @@ pub fn get_config() -> String {
         }
     ],
     "position": {
-        "x": 50,
-        "y": 900
+        "x": -15,
+        "y": 1395
     }
 }"#,
             );
