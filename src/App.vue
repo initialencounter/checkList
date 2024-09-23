@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { register, ShortcutEvent } from "@tauri-apps/plugin-global-shortcut";
 import { invoke, isTauri } from "@tauri-apps/api/core";
 import {
   getCurrentWebviewWindow,
@@ -17,19 +16,23 @@ type file = {
 }[];
 
 interface Link {
-    link: string;
+  link: string;
 }
 const hoverLock = ref<boolean>(true);
 const check_list = ref<file>([]);
+
 if (isTauri()) {
   appWindow = getCurrentWebviewWindow();
   (async () => {
     const check_list_value = (await invoke("get_config")) as string;
     check_list.value = JSON.parse(check_list_value)["check_list"];
   })();
-  listen('open_link', (data: Event<Link>): void => {
-    window.open(data.payload.link)
-  })
+  listen("open_link", (data: Event<Link>): void => {
+    window.open(data.payload.link);
+  });
+  listen("KeyPressed", (): void => {
+    handleShortcut();
+  });
 }
 
 function switchState(name: number) {
@@ -37,7 +40,7 @@ function switchState(name: number) {
   check_list.value[name].state = check_list.value[name].state ? false : true;
 }
 function switchStateHover(name: number) {
-  if(hoverLock.value) return;
+  if (hoverLock.value) return;
   target = Number(name);
   check_list.value[name].state = check_list.value[name].state ? false : true;
 }
@@ -45,18 +48,14 @@ async function handleHide() {
   await appWindow.hide();
 }
 
-if (isTauri()) {
-  register("CommandOrControl+Shift+Space", (event: ShortcutEvent) => {
-    if (event.state === "Pressed") return;
-    if (!check_list.value[target]) {
-      target = 0;
-    }
-    check_list.value[target].state = check_list.value[target]
-      .state
-      ? false
-      : true;
-    target += 1;
-  });
+function handleShortcut() {
+  if (!check_list.value[target]) {
+    target = 0;
+  }
+  check_list.value[target].state = check_list.value[target].state
+    ? false
+    : true;
+  target += 1;
 }
 
 document.oncontextmenu = function () {
@@ -77,9 +76,9 @@ function handleClearList() {
       v-for="(item, index) in check_list"
       class="grid-item"
       :key="index"
-      :style="{ 
+      :style="{
         background: item.state ? '#3cb44b' : '#4363d8',
-        borderRadius: index == 0? '10px 0 0 10px' : '0'
+        borderRadius: index == 0 ? '10px 0 0 10px' : '0',
       }"
       @click="switchState(index)"
       @mouseover="switchStateHover(index)"
@@ -89,7 +88,13 @@ function handleClearList() {
       {{ item.name }}
     </button>
     <button class="action-btn" @click="handleClearList">清除列表</button>
-    <button class="action-btn-hide" @click="handleHide" :style="{borderRadius:'0 10px 10px 0'}">隐藏</button>
+    <button
+      class="action-btn-hide"
+      @click="handleHide"
+      :style="{ borderRadius: '0 10px 10px 0' }"
+    >
+      隐藏
+    </button>
   </div>
 </template>
 

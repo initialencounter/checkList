@@ -6,11 +6,13 @@ use tauri_plugin_autostart::MacosLauncher;
 use config::get_config;
 use handle::handle_setup;
 use utils::{log_info, restart};
+extern crate windows;
 
 mod config;
 mod handle;
 mod menu;
 mod utils;
+mod shortcut;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 fn main() {
@@ -19,7 +21,6 @@ fn main() {
             MacosLauncher::LaunchAgent,
             None,
         ))
-        .plugin(tauri_plugin_global_shortcut::Builder::new().build())
         .plugin(tauri_plugin_dialog::init())
         .setup(|app: &mut tauri::App| Ok(handle_setup(app)))
         .invoke_handler(tauri::generate_handler![restart, get_config, log_info])
