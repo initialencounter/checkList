@@ -6,7 +6,7 @@ use tauri_plugin_autostart::MacosLauncher;
 use config::get_config;
 use handle::handle_setup;
 use utils::{log_info, restart};
-extern crate windows;
+// extern crate windows;
 
 mod config;
 mod handle;
