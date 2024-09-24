@@ -7,7 +7,8 @@ use tauri_plugin_dialog::{DialogExt, MessageDialogKind};
 
 use crate::config::get_config_struct;
 use crate::menu::create_menu_item;
-use crate::shortcut::win32shortcut;
+// use crate::shortcut::{win32shortcut};
+use crate::shortcut::{rdev_shortcut};
 use crate::utils::{check_update, hide_or_show, restart};
 
 #[derive(Serialize, Clone)]
@@ -111,7 +112,8 @@ pub fn handle_setup(app: &App<Wry>) {
     window
         .set_always_on_top(true)
         .expect("Failed to set window as topmost");
-    tauri::async_runtime::spawn(async move {
-        win32shortcut(window);
-    });
+    // tauri::async_runtime::spawn(async move {
+    //     win32shortcut(window);
+    // });
+    rdev_shortcut(window);
 }
