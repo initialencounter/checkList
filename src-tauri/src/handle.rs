@@ -8,7 +8,7 @@ use tauri_plugin_dialog::{DialogExt, MessageDialogKind};
 use crate::config::get_config_struct;
 use crate::menu::create_menu_item;
 // use crate::shortcut::{win32shortcut};
-use crate::shortcut::{rdev_shortcut};
+use crate::shortcut::rdev_shortcut;
 use crate::utils::{check_update, hide_or_show, restart};
 
 #[derive(Serialize, Clone)]
@@ -92,6 +92,7 @@ pub fn handle_setup(app: &App<Wry>) {
     let _ = TrayIconBuilder::new()
         .icon(app.default_window_icon().unwrap().clone())
         .menu(&tray_menu)
+        .menu_on_left_click(false)
         .on_menu_event(move |app, event| match event.id().as_ref() {
             "help" => app.emit("open_link", Some(Link { link: "https://github.com/initialencounter/checkList?tab=readme-ov-file#使用帮助".to_string() })).unwrap(),
             "quit" => app.exit(0),
