@@ -16,19 +16,24 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1.0.120"
 reqwest = { version = "0.12.5", features = ["blocking", "json"] }
 tauri-plugin-dialog = "2.0.0-rc.0"
-rdev = {version = "0.5.3", features = ["unstable_grab"] }
 
 [target."cfg(not(any(target_os = \"android\", target_os = \"ios\")))".dependencies]
 tauri-plugin-autostart = "2.0.0-rc.0"
 tauri-plugin-global-shortcut = "2.0.0-rc"
 
-#[target.'cfg(target_os = "windows")'.dependencies]
-#windows = {  version = "0.58.0", features = [
-#    "Win32_Foundation",
-#    "Win32_System_Threading",
-#    "Win32_UI_WindowsAndMessaging",
-#    "Win32_UI_HiDpi",
-#    "Win32_UI_Input_KeyboardAndMouse"
-#] }
-#lazy_static = "1.4.0"
-#chrono = "0.4.37"
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = {  version = "0.60.0", features = [
+  "Win32_Foundation",
+  "Win32_System_Threading",
+  "Win32_UI_WindowsAndMessaging",
+  "Win32_UI_HiDpi",
+  "Win32_UI_Input_KeyboardAndMouse"
+] }
+tokio = { version = "1.0", features = ["rt", "rt-multi-thread", "sync"] }
+futures = "0.3.31"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+rdev = {version = "0.5.3", features = ["unstable_grab"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+rdev = {version = "0.5.3", features = ["unstable_grab"] }
