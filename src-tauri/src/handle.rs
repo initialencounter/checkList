@@ -92,7 +92,7 @@ pub fn handle_setup(app: &App<Wry>) {
     let _ = TrayIconBuilder::new()
         .icon(app.default_window_icon().unwrap().clone())
         .menu(&tray_menu)
-        .menu_on_left_click(false)
+        .show_menu_on_left_click(false)
         .on_menu_event(move |app, event| match event.id().as_ref() {
             "help" => app.emit("open_link", Some(Link { link: "https://github.com/initialencounter/checkList?tab=readme-ov-file#使用帮助".to_string() })).unwrap(),
             "quit" => app.exit(0),
@@ -106,7 +106,7 @@ pub fn handle_setup(app: &App<Wry>) {
         .on_tray_icon_event(handle_tray_icon_event)
         .build(app).unwrap();
     let window = app.get_webview_window("main").unwrap();
-    let config = get_config_struct();
+    let config = get_config_struct(app.app_handle());
     let pos = PhysicalPosition::new(config.position.x, config.position.y);
     window.set_position(pos).unwrap();
     window.set_shadow(false).unwrap();
