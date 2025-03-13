@@ -1,11 +1,9 @@
 use tauri::{Emitter, WebviewWindow};
 
-#[cfg(target_os = "linux")]
-#[cfg(target_os = "macos")]
+#[cfg(any(target_os = "linux", target_os = "macos"))]
 use rdev::{grab, Event, EventType, Key};
 
-#[cfg(target_os = "linux")]
-#[cfg(target_os = "macos")]
+#[cfg(any(target_os = "linux", target_os = "macos"))]
 use std::sync::{Arc, Mutex};
 
 #[cfg(target_os = "windows")]
@@ -44,8 +42,7 @@ pub fn rdev_shortcut(window: WebviewWindow) {
     });
 }
 
-#[cfg(target_os = "linux")]
-#[cfg(target_os = "macos")]
+#[cfg(any(target_os = "linux", target_os = "macos"))]
 pub fn rdev_shortcut(window: WebviewWindow) {
     tauri::async_runtime::spawn(async move {
         let is_ctrl_press = Arc::new(Mutex::new(false));
