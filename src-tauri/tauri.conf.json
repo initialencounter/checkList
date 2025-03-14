@@ -8,7 +8,7 @@
   },
   "identifier": "com.initialencounter.checkList",
   "productName": "checkList",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "app": {
     "macOSPrivateApi": true,
     "windows": [

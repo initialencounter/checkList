@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use serde_json::json;
 use std::path::Path;
 use tauri_plugin_store::StoreExt;
 
@@ -120,13 +121,53 @@ pub fn get_config(app: tauri::AppHandle) -> String {
 }
 
 pub fn get_config_struct(app: &tauri::AppHandle) -> Config {
+    let check_list = get_check_item_config(app);
+    let position = get_position_config(app);
+    Config { check_list, position }
+}
+
+pub fn get_position_config(app: &tauri::AppHandle) -> PositionConfig {
+    let store = app.store(&Path::new("checkList.json")).unwrap();
+    let position = match store.get("position") {
+        Some(data) => match serde_json::from_value(data) {
+            Ok(position) => position,
+            Err(_) => Config::default().position,
+        },
+        None => {
+            save_position_config(app, Config::default().position).unwrap();
+            Config::default().position
+        }
+    };
+    position
+}
+
+fn get_check_item_config(app: &tauri::AppHandle) -> Vec<CheckItem> {
     let store = app.store(&Path::new("checkList.json")).unwrap();
     let check_list = match store.get("check_list") {
         Some(data) => match serde_json::from_value(data) {
-            Ok(config) => config,
-            Err(_) => Config::default(),
+            Ok(check_list) => check_list,
+            Err(_) => Config::default().check_list,
         },
-        None => Config::default(),
+        None => {
+            save_check_item_config(app, Config::default().check_list).unwrap();
+            Config::default().check_list
+        }
     };
     check_list
+}
+
+// 保存配置
+fn save_check_item_config(app: &tauri::AppHandle, config: Vec<CheckItem>) -> Result<(), String> {
+    let store = app.store(&Path::new("checkList.json")).unwrap();
+    store.set("check_list", json!(config));
+    store.save().map_err(|e| e.to_string())?;
+    Ok(())
+}
+
+// 保存配置
+fn save_position_config(app: &tauri::AppHandle, config: PositionConfig) -> Result<(), String> {
+    let store = app.store(&Path::new("checkList.json")).unwrap();
+    store.set("position", json!(config));
+    store.save().map_err(|e| e.to_string())?;
+    Ok(())
 }
