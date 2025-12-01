@@ -17,6 +17,7 @@
         "width": 1980,
         "height": 48,
         "title": "checkList",
+        "visible": false,
         "transparent": true,
         "decorations": false,
         "alwaysOnTop": true
